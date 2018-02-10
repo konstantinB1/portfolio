@@ -1,0 +1,93 @@
+.links-btm {
+	@include container(70%, flex);
+    padding-top:30px;
+    height: 250px;
+    @include screen(small) { height: 350px; flex-direction:column }
+
+    .left-logo,
+    .right-banners {
+    	width:25%;
+    }
+
+    .mid-links {
+    	width:50%;
+    	display: flex;
+        @include screen(small) { 
+            width: 100%; 
+        }
+    }
+
+    .right-banners {
+        position: relative;
+        text-align: right;
+        @include screen(medium) { width: 50%; }
+        @include screen(small) { width: 100%; }
+    }
+
+
+    .right-banners > .banners-wrap {
+        position: absolute;
+        display: flex;
+        flex-flow: column wrap;
+        bottom:40px;
+        right:0;
+        img:first-child {
+            margin-bottom:-15px;
+            @include screen(small) { margin-bottom: 0; margin-right:2px; }
+        }
+        @include screen(small) { 
+            justify-content: center; 
+            flex-direction: row; 
+            position: relative;
+            justify-content:center;
+            bottom:-20px;            
+        }
+        @include screen(xsmall) { 
+        }
+    }
+
+    .right-banners > .login-wrap {
+        @include screen(small) { display: none; }
+    }
+
+    .mid-links .ul-item {
+    	width:33.3333%;
+        @include screen(medium) { 
+            width: 50%;
+       }
+       @include screen(small) {
+        @include flex-center;
+        flex-direction:column;
+       }
+    }
+
+     .mid-links .ul-item > ul {
+    	-webkit-padding-start:0;
+    } 
+
+     .mid-links .ul-item > ul li {
+    	list-style-type: none;
+    	line-height: 2;
+    } 
+
+    .mid-links .ul-item > h5 {
+        margin:0;
+      	text-transform: uppercase;
+    }         
+
+    .mid-links .ul-item:first-child ul li:first-child,
+    .mid-links .ul-item:nth-child(2) ul li:first-child {
+    	list-style-type: circle;
+        @include screen(small) { list-style-type: none; }
+    }   
+
+    .left-logo {
+        @include screen(medium) { display: none; }
+    }   
+
+    .mid-links .ul-item:last-child,
+    .right-banners > .login-wrap {
+        @include screen(xsmall) { display: none };
+    }
+
+}

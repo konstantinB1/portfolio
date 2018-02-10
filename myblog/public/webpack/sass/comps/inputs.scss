@@ -1,0 +1,133 @@
+.input-comment,
+.textbox-comment {
+	width:100%;
+	border:0;
+	border: 1px solid $pink;
+	padding: 15px 8px;
+	resize:none;
+	transition:0.38s ease-in;
+}
+
+.input-comment:nth-child(2),
+.input-comment:nth-child(3) {
+	border-top:0;
+	border-radius: 0;
+}
+
+.input-comment {
+	border-radius: 7px 7px 0 0;	
+	border-bottom:1px dashed #D7D7D7;	
+}
+
+.textbox-comment {
+	height: 82px;	
+	border-top:0;
+	border-bottom:0;
+}
+
+textarea:focus,
+textarea:active,
+select:active,
+select:focus,
+input:active,
+input:focus,
+button:active,
+button:focus {
+   outline:0;
+}
+
+.search-input:placeholder {
+    color:#000000;
+    text-align: center;
+}
+
+.label-comment {
+	display: block;
+	@include next-el-distance(40px, 5px);
+}
+
+.comments-submit {
+	display: block;
+	background: white;
+	border: 1px solid $pink;
+	color: $dark;
+	@include mcenter;
+	cursor: pointer;
+	transition:0.3s ease-out;
+	border-radius: 0 0 7px 7px;	
+	margin-top:-3.5px;
+}
+
+.input-post-add {
+	border: 1px solid $lgreen;
+}
+
+.comments-submit:hover {
+	background: $lgreen;
+}
+
+.login-input {
+	border:1px solid $lgreen;
+}
+
+.login-button {
+	border:1px solid $lgreen;
+	background: white;
+	transition: 0.5s;
+}
+
+.login-button:hover {
+	background: $lgreen;
+	cursor: pointer;
+}
+
+.admin-input-searchPosts {
+	border:1px solid $dark;
+	height: 35px;
+	padding:10px;
+	@include get-icon('search.png');
+	@include icon-modify(6.5%, 90%);		
+	transition:0.7s ease-out;
+}
+
+.admin-input-searchPosts:focus,
+.admin-input-searchPosts:active {
+	border:1px solid $pink;
+	@include get-icon('search-hov.png');
+	@include icon-modify(6.5%, 90%);			
+}
+
+.input-select-posts {
+	width:10%;
+	padding:2px 10px;
+	height: 35px;
+	border:1px solid $dark;
+	cursor: pointer;
+}
+
+.input-error,
+.input-error::placeholder {
+	color: $error;
+}
+
+.posts-search {
+	height: 37px;
+	border: 1px solid $button-border;
+	border-right:0;
+	padding:7px;
+    box-shadow: inset 0px 1px 7px 0.2px #ECECEC;	
+}
+
+.label-search-submit {
+	@include size(50px, 37px);	
+	appearance:none;
+	border:1px solid $button-border;
+	border-radius: 0 9px 9px 0;
+	@include get-icon('search.png', null, #F4F4F4);
+	@include icon-modify(29%, 50%);
+	cursor: pointer;
+	&:hover {
+		@include get-icon('search.png', null, darken(#F4F4F4, 1%));
+	    @include icon-modify(29%, 50%);				
+	}
+}

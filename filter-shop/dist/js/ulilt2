@@ -1,0 +1,203 @@
+	$(document).ready(function() {
+
+    
+     $('.selectpicker').selectpicker();
+
+     var nav     = $('.links-hamb'),
+     menu        = $('.collapse-list'),
+     filterBut   = $('.filter'),
+
+
+
+
+     filterSec       = $('.sect-filter'),
+     filterSecVis   = true;
+
+     resultSec   = $('.sect-res'),
+     resultSecVis   = true;
+
+     xFilter     = $('.glyphicon.glyphicon-remove'),
+     xFilterOn   = true;
+
+
+     filterRes   = $('#filterRes'),
+     filterResOn = false;
+
+
+     buttons     = $('.btype')
+     resultIt     = $('.res-block')     
+     ;
+
+    filterRes.css({'display':'none'});
+
+ //   if(window.innerWidth < 1500 && window.innerWidth > 1200) {
+ //         resultSec.removeClass('col-lg-9').addClass('col-lg-12');    
+ //   }
+
+ //   $(window).resize(function() {
+
+ //     if(window.innerWidth < 1500) {
+ //       filterSecVis   = false;
+ //       filterRes.hide();
+ //       if(resultSec.hasClass('col-lg-9')) {
+ //         resultSec.removeClass('col-lg-9').addClass('col-lg-12');
+ //       }
+ //     }
+ //     else if(window.innerWidth > 1500) {
+ //      filterSecVis = true;
+ //      filterRes.show();
+ //       if(resultSec.hasClass('col-lg-12')) {
+ //         resultSec.removeClass('col-lg-12').addClass('col-lg-9');
+ //       }    
+ //     }
+ //   });
+
+ // console.log(filterSecVis);
+
+ //  $(xFilter, filterRes).click(function(ev) {
+    
+ //     if(ev.target == xFilter) {
+
+ //       filterSec.hide();
+ //       filterRes.show();   
+
+ //         if(resultSec.hasClass('col-lg-9')) {
+ //           resultSec.removeClass('col-lg-9').addClass('col-lg-12');
+ //         }              
+ //     }
+ //     else {
+ //       filterSec.hide();
+ //       filterRes.show(); 
+ //         if(resultSec.hasClass('col-lg-12')) {
+ //           resultSec.removeClass('col-lg-9').addClass('col-lg-12');
+ //         }                    
+ //     }
+  
+
+ //  });
+
+   console.log($('.displayres').find('.row'));
+
+
+   if(window.innerWidth < 1500  && resultSec.hasClass('col-lg-9')) {
+           resultSec.removeClass('col-lg-9').addClass('col-lg-12');   
+   }
+
+    $(xFilter).click(function(ev) {
+        console.log(event.relatedTarget);
+          $(window).resize(function(eve) {
+             if(window.innerWidth >= 1500 && resultSec.hasClass('col-lg-9')) {
+                   if(filterSec.not(':visible') && resultSec.hasClass('col-lg-9')) {
+                         resultSec.removeClass('col-lg-9').addClass('col-lg-12');
+                         filterRes.show();                          
+                   }      
+                   if(filterSec.is(':visible') && resultSec.hasClass('col-lg-12'))  {
+                         resultSec.removeClass('col-lg-12').addClass('col-lg-9');
+                          filterRes.hide();                           
+                   }          
+             }  
+
+          });   
+        if(filterSec.not(':visible') && resultSec.hasClass('col-lg-9')) {
+          resultSec.removeClass('col-lg-9').addClass('col-lg-12');     
+          filterSec.hide();
+          filterRes.css({'display':'inline'})
+          .click(function() {
+              filterSec.show();     
+              filterRes.hide();
+              resultSec.removeClass('col-lg-12').addClass('col-lg-9');                                   
+          })
+
+        }
+        else {
+          resultSec.removeClass('col-lg-12').addClass('col-lg-9');          
+          filterSec.show();          
+        }
+    });
+ $(window).resize(function() {
+     if(window.innerWidth <= 1500 && resultSec.hasClass('col-lg-9')) {
+          resultSec.removeClass('col-lg-9').addClass('col-lg-12');         
+   }
+   else if(window.innerWidth >= 1500 && resultSec.hasClass('col-lg-12')) {
+          resultSec.removeClass('col-lg-12').addClass('col-lg-9');    
+   }
+ })
+
+
+    if(resultSec.hasClass('col-lg-12') && resultIt.hasClass('col-lg-4')) {
+         resultIt.removeClass('col-lg-4').addClass('.col-lg-3');
+    }
+    else {
+         resultIt.removeClass('col-lg-3').addClass('.col-lg-4');      
+    }
+ 
+    filterBut.click(function(ev) {
+        if(filterSec.is(':visible')) {
+          filterSec.hide(150);        
+        }
+        else {
+          if(filterSec.hasClass('col-md-3'))
+            filterSec.addClass('col-md-12');
+          filterSec.show(150);
+        }   
+    });
+
+      // Navigation toggle
+	    nav.click(function(){
+	      if(menu.is(':visible')) {
+	        menu.hide(150);
+	        $('.whitespace').animate({'height':'-=100px'}, 100);	        
+	      }
+	      else {
+	        menu.show(150);
+	        $('.whitespace').animate({height:'+=100px'}, 100);
+	      } 	
+	                 
+	    });
+    //     $(window).resize(function() {
+
+
+
+    //        if($(filterSec).not(':visible') && window.innerWidth < 1401) {
+    //             if(resultSec.hasClass('col-lg-9')) {
+    //               resultSec.removeClass('col-lg-9').addClass('col-lg-12');
+    //             }
+    //             resultSec.show();         
+    //             filterRes.css({'display':'none'});                    
+    //        }          
+    //        if($(menu).not(':visible') && window.innerWidth > 780) {
+ 	  //             menu.show();          	 
+    //        }
+    //     });
+
+    // // Select dropdown      
+    // $('.filter-dropdown').click(function(ev) {
+
+    //      $('.filter-dropdown-toggle').css({'display':'block'});
+    //      $('.filter-dropdown').animate({
+    //       'color': 'green'
+    //       },500)
+    //      $('.filter-dropdown-toggle').mouseleave(function() {
+    //      $('.filter-dropdown-toggle').css({'display':'none'});                
+    //       });
+
+    //      $('.filter-dropdown-toggle').click(function(ev) {
+
+    //        if(ev.target.nodeName === 'LI')
+    //         $('#results').val(ev.target.innerHTML); 
+    //         $('#current-location').html(ev.target.innerHTML);
+
+    //        $('.filter-dropdown-toggle').css({'display':'none'});
+    //      });
+    //   });
+ 
+    $('.bolig').jRange({
+    from: 0,
+    to: 300,
+    width: '100%',
+    isRange: true,
+    onstatechange: function() {}
+    });
+
+
+	});

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400');
+body {
+	margin:0;
+	padding:0;
+	background: #FFFFFF;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	margin:auto;
+	position: relative;
+	width:60%;
+	padding:10px;
+	margin-top:20px;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.container .errors {
+	display: none;
+	position: absolute;
+	width:250px;
+	height: 110px;
+	background: #FFDCDC;
+	margin-top:20px;
+	left:-90px;
+	padding:15px;
+	border-radius: 4px;
+}
+
+.container .errors p {
+	font-weight: 100;
+	text-align: center;
+}
+
+.container .post,
+.container .comments {
+	width:50%;
+	margin:auto;
+}
+
+.container .buttons {
+	margin:auto;
+	width:100%;
+	text-align: center;	
+}
+
+.container .buttons input[type=submit],
+.container .buttons button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+	border:0;
+	background: #0190FF;
+	border-radius: 3px;
+	padding:10px;
+	width:20%;
+	height: 37px;
+	color:white;
+	cursor: pointer;
+	transition: 0.3s ease-out;
+}
+
+.container .buttons input[type=submit]:hover,
+.container .buttons button:hover {
+	background: #45AEFF;
+}
+
+.container .comments .comments-container {
+	margin-top:15px;
+}
+
+.container .comments .comments-container h2 {
+   text-align: center;
+   font-weight: 300;
+   color: #FF9393;
+   font-size:20px;
+}
+
+.container .comments .comments-container .user-comment {
+	width:100%;
+	padding: 0 10px; 
+    min-height: 50px;
+    margin-top:25px;
+}
+
+.container .comments .comments-container .user-comment a {
+	text-decoration: none;
+	color: #007DFF;
+	font-weight: 200;
+}
+
+.container .comments .comments-container .user-comment a:hover {
+	color: #69B3FF;
+}
+
+.container .comments .comments-container .user-comment p {
+    margin:0;
+    line-height: 1.2;
+}
+
+
+.container .comments .comments-container .user-comment p:first-child {
+    font-weight: 400;
+}
+
+.container .comments .comments-container .user-comment p:not(:first-child) {
+    font-weight: 100;
+}
+
+.container .comments > h2 {
+	text-align: center;
+	font-weight: 100;
+}
+
+.container > .post input[type=text],
+.container > .post textarea {
+	border:1px solid #52B8FF;
+	border-radius: 5px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	width:100%;	
+	margin-top:20px;
+	padding:7px;
+	opacity: 0.6;
+	transition: 0.4s ease-out;
+} 
+
+.container > .post input[type=text]:active,
+.container > .post textarea:active,
+.container > .post input[type=text]:focus,
+.container > .post textarea:focus {
+	outline: 0;
+	opacity: 1;
+}
+
+.container > .post input[type=text] {
+	height: 35px;
+}
+
+.container > .post textarea {
+	resize: none;
+	height: 150px;
+}

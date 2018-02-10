@@ -1,0 +1,35 @@
+.fullline {
+	box-sizing:border-box;
+	width:100%;
+	border:1px solid $fullline;
+}
+.posttitle {
+	@include container(70%, block);
+	@include screen(medium) { width:85%; }
+    .posttitle-row {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content:space-between;
+		@include next-el-distance(70px, 40px);
+		@include screen(small) { flex-direction:column; }
+	}
+   .posttitle-row .posttitle-image {
+		@include screen(small) { text-align: center; }
+	}
+	.posttitle-row .posttitle-image .illu {	
+		@include screen(xsmall) { width:100%; }
+	}
+	.posttitle-row .posttitle-text {
+		@include size(48%, 350px);
+		h1 { margin:0; }
+	    button { margin-top:20px; }
+	    @include screen(xsmall) { height: 300px; }
+	    @include screen(small) {
+			@include size(100%, 250px);
+	    	* { text-align: center; }
+	    	button { display: block; @include mcenter; }
+	    	&:nth-of-type(2) { order:-1; }
+	    }   
+	}
+
+}

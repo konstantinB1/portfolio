@@ -1,0 +1,31 @@
+<?php
+
+$index      = $this->escapeHtml($this->url('home'));
+$about      = $this->escapeHtml($this->url('home', ['action' => 'about']));
+$contact    = $this->escapeHtml($this->url('home', ['action' => 'contact']));
+    
+$posts     = isset($adminMode) ? $this->escapeHtml($this->url('admin/posts_management')) : '';
+$logout    = isset($adminMode) ? $this->escapeHtml($this->url('admin/login_management', ['action' => 'logout'])) : '';
+
+$userInfo   = isset($adminMode) ? 
+              '<li><a class="font-light text-usernav-right link-nav-admin" href="' . $posts . '"><span class="arrow-down"></span>Manage posts</a></li>'
+              : '';
+$liLogout  = isset($adminMode) ? '<li><a class="font-light text-usernav-right link-nav-admin" href="' . $logout . '"> Log out </a></li>' : ''; 
+
+?>
+<header class="full-width-navbar">
+	<nav class="main-nav" data-popped="false">
+		<div class="menu-burger">
+		</div>
+		<ul class="left-nav">
+			<li><a class="font-medium text-usernav-left link-usernav" href="<?php echo $index; ?>">Home </a></li>
+			<li><a class="font-medium text-usernav-left link-usernav" href="<?php echo $contact; ?>">Contact </a></li>
+			<li><a class="font-medium text-usernav-left link-usernav" href="<?php echo $about; ?>">About</a></li>		
+		</ul>
+		<ul class="right-nav">
+			<?php echo $userInfo; ?>	
+			<?php echo $liLogout; ?>				
+			<li><span class="icon-search"></span></li>		
+		</ul>
+	</nav>
+</header>

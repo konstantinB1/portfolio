@@ -1,0 +1,19 @@
+.contact-form {
+	@include generic-container;
+	margin-top:70px;
+
+
+    .contact-form-wrap {
+
+	    textarea {
+	    	height: 150px;
+	    }
+
+	    input {
+	    	width:100%;
+	    	height: 55px;
+	    }
+
+    }
+
+}

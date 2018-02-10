@@ -1,0 +1,179 @@
+hr.top-divider {
+  width: 99.69%;
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  opacity: 0.5;
+}
+.top-text-wrapper {
+  position: relative;
+  top: 9px;  
+
+  .text-small {
+    @include font-size($font_sm);   
+    color: $m_gray;
+    margin-top:5px;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  ul.nav-top {
+    list-style-type: none;
+    margin-top: 0;
+    float: right;
+    margin-right:-20px;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+    }
+    li a {
+      @include font-size($font_sm);
+      color: $m_gray;
+      text-decoration: none;
+      padding-right: 15px;
+      letter-spacing: 0.2px;
+    }
+    li a:hover {
+      text-decoration: underline;
+    }
+    li:last-child {
+    }
+  }
+}
+.logo-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  left: -3px;
+
+  .logo {
+    background: url('../img/logo.png') no-repeat;
+    display: inline-block;
+    background-size: 80%;
+    width: 180px;
+    height: 85px;   
+  }
+  .logo-desc {
+    @include font-size($font_mds);
+    position: relative;
+    color: $m_gray;
+    top: -10px;
+    left: -40px;
+  }
+}
+.nav-menu {
+  display: none;
+}
+.myacc-wrapper {
+  position: relative;
+  top:37px;
+  right:0;
+  float: right;
+}
+.button-wrapper {
+  float: right;
+}
+.nav-cats {
+  float: left;
+  margin-left:-38px;
+  margin-top:-5px;
+
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin-right:20px;
+    }
+    li:last-child {
+      margin-right:0;
+    }
+    li a {
+      color:$dark_blue;
+      text-decoration: none;
+      font-weight: $medium;
+      @include font-size($font_reg);
+    }
+    li a:hover {
+      opacity: 0.7;
+    } 
+  }
+}
+
+.response-nav {
+  display: none;
+}
+
+   .info-top,
+   .nav-cats,
+   .top-text-wrapper,
+   .button-wrapper,
+   .lower-header,
+   .myacc-wrapper {
+      display: block;
+  }
+
+@media #{$headerbreak} {
+   .info-top,
+   .nav-cats,
+   .top-text-wrapper,
+   .myacc-wrapper,
+   .lower-header,   
+   .button-wrapper,
+   .logo-desc {
+      display: none;
+  }
+  hr.top-divider {
+    top:40px;
+    width:120%;
+    max-width: 100%;
+    float: right;
+  }
+  .response-nav {
+       display: block;
+
+     nav.response-menu {
+       float: right;
+       position: relative;
+       right: 0;
+       top:-12px;
+
+       ul {
+        list-style-type: none;
+
+        li {
+          display: inline-block;
+          margin: 0 5px;
+        }
+       }
+
+     }    
+  }
+  
+  .logo-wrapper {
+    top:-120px;
+  }
+  .logo {
+    width:40%;
+    max-width: 9%;
+  } 
+}
+
+@media (max-width: 1500px) {
+
+  .text-small {
+    display: none;
+  }
+  .nav-cats {
+    float: left;
+    margin-left:-38px;
+    margin-top:-5px;
+
+    ul {
+      width: 150px;
+      overflow-x:hidden;
+      white-space: nowrap;
+    }
+  }
+
+}

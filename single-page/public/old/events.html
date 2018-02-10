@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+p {
+	font-family: monospace;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-content: center;
+	font-size: 150px;
+	color: white;
+}
+
+.typing:after {
+    content: "_";
+    color:white;
+    font-size:150px;
+   visibility: hidden;    
+    animation: type 1s infinite;
+}
+
+@keyframes type {
+	55% {
+		visibility: hidden;
+	}
+	100% {
+		visibility: visible;
+	}
+}
+
+.animate-in {
+	animation: anim-in 0.8s ease-in-out both;
+}
+
+.animate-out {
+	animation: anim-out 0.5s ease-out both;
+}
+
+@keyframes anim-out {
+	from {
+		opacity: 1;
+		transform: translate3d(0, 0px, 0px);		
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(450px, 0px, 0px);
+	}
+}
+
+@keyframes anim-in {
+	from {
+		opacity: 0;
+		transform: translate3d(0px, -50px, 0px);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0px, 0px);
+	}
+}
+
+.box-cont {
+	position: relative;
+	margin: auto;
+	display: block;
+	width: 20%;
+	height: 150px;
+	text-align: center;
+	vertical-align: middle;
+}
+.box {
+	border: 1px solid white;
+	margin: auto;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+body.first {
+	overflow: hidden;
+	background: #24A6E3
+}
+body.second {
+	background: #FF0054
+}
+body.third {
+	background: #FF0054
+}
+</style>
+<title></title>
+<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body class="first">
+<div class="bdy">
+<p class="mypara animate-in typing">Hello my name is dick! </p>
+</div>
+<div class="box-cont">
+</div>
+<script type="text/javascript">
+
+function Typewriter (sSelector, nRate) {
+
+  function clean () {
+    clearInterval(nIntervId);
+    bTyping = false;
+    bStart = true;
+    oCurrent = null;
+    aSheets.length = nIdx = 0;
+  }
+
+  function scroll (oSheet, nPos, bEraseAndStop) {
+    if (!oSheet.hasOwnProperty('parts') || aMap.length < nPos) { return true; }
+
+    var oRel, bExit = false;
+
+    if (aMap.length === nPos) { aMap.push(0); }
+
+    while (aMap[nPos] < oSheet.parts.length) {
+      oRel = oSheet.parts[aMap[nPos]];
+
+      scroll(oRel, nPos + 1, bEraseAndStop) ? aMap[nPos]++ : bExit = true;
+
+      if (bEraseAndStop && (oRel.ref.nodeType - 1 | 1) === 3 && oRel.ref.nodeValue) {
+        bExit = true;
+        oCurrent = oRel.ref;
+        sPart = oCurrent.nodeValue;
+        oCurrent.nodeValue = '';
+      }
+
+      oSheet.ref.appendChild(oRel.ref);
+      if (bExit) { return false; }
+    }
+
+    aMap.length--;
+    return true;
+  }
+
+  function typewrite () {
+    if (sPart.length === 0 && scroll(aSheets[nIdx], 0, true) && nIdx++ === aSheets.length - 1) { clean(); return; }
+
+    oCurrent.nodeValue += sPart.charAt(0);
+    sPart = sPart.slice(1);
+  }
+
+  function Sheet (oNode) {
+    this.ref = oNode;
+    if (!oNode.hasChildNodes()) { return; }
+    this.parts = Array.prototype.slice.call(oNode.childNodes);
+
+    for (var nChild = 0; nChild < this.parts.length; nChild++) {
+      oNode.removeChild(this.parts[nChild]);
+      this.parts[nChild] = new Sheet(this.parts[nChild]);
+    }
+  }
+
+  var
+    nIntervId, oCurrent = null, bTyping = false, bStart = true,
+    nIdx = 0, sPart = "", aSheets = [], aMap = [];
+
+  this.rate = nRate || 100;
+ 
+  this.play = function () {
+    if (bTyping) { return; }
+    if (bStart) {
+      var aItems = document.querySelectorAll(sSelector);
+
+      if (aItems.length === 0) { return; }
+      for (var nItem = 0; nItem < aItems.length; nItem++) {
+        aSheets.push(new Sheet(aItems[nItem]));
+        /* Uncomment the following line if you have previously hidden your elements via CSS: */
+        // aItems[nItem].style.visibility = "visible";
+      }
+
+      bStart = false;
+    }
+
+    nIntervId = setInterval(typewrite, this.rate);
+    bTyping = true;
+  };
+ 
+  this.pause = function () {
+    clearInterval(nIntervId);
+    bTyping = false;
+  };
+ 
+  this.terminate = function () {
+    oCurrent.nodeValue += sPart;
+    sPart = "";
+    for (nIdx; nIdx < aSheets.length; scroll(aSheets[nIdx++], 0, false));
+    clean();
+  };
+}
+
+let type = new Typewriter('.mypara');
+
+onload = function() {
+	type.play();
+}
+
+
+console.log(type);
+
+</script>
+</body>
+</html>

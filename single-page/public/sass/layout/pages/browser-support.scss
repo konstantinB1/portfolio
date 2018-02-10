@@ -1,0 +1,27 @@
+.browser-support {
+	position: relative;
+	top:0;
+	width:100%;
+	overflow: hidden;
+	height: 150px;
+	background: $mainblue;
+	border-bottom:1px solid $mainblue;
+	z-index: 9999;
+	padding:50px;
+	@include flex-center;
+	flex-direction:column;
+	* {
+		margin:5px;
+		@include mcenter;
+	}
+	a {
+		flex-direction:row;
+	}
+
+	.browser-sup-close {
+		position: absolute;
+		right:80px;
+		cursor: pointer;
+	}
+
+}

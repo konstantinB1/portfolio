@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Index </title>
+    <meta charset="utf-8">
+    <meta name="description" content="{{desc}}">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/jquery.range.js"></script>
+    <script type="text/javascript" src="js/ulilt.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/overwrite.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.range.css" />
+  </head>
+  <body>
+    <div class="dummies"></div>
+    <nav class="navbar navbar-default"> <!-- NAVBAR START -->
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Premium</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+    </nav> <!-- NAVBAR END -->
+    <header class="user-int"> <!-- HEADER START -->
+    <div class="logo-wrap">
+      <img class="logo" alt="Folkmatic" src="img/logo.png">
+    </div>
+    <div class="links-right">
+      <div class="resp-menu">
+        <ul class="collapse-list">
+          <li><a href="">Find boliger</a></li>
+          <li><a href="">Udlej boliger</a></li>
+          <li><a href="">Hjaelp</a></li>
+          <li><button type="button" class="btn btn-danger">Log Ind</button></li>
+        </ul>
+      </div>
+      <a href="#"><span class="glyphicon glyphicon-search"></span></a>
+      <div class="links-hamb">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+      </div>
+    </div>
+    </header> <!-- HEADER END -->
+    <hr class="splitcontent">
+    <div class="whitespace"></div>
+    <main class="container"> <!-- MAIN START -->
+    <div class="row">
+      <div class="sect-filter col-lg-3 col-md-12 "> <!-- div FILTER END -->
+      <strong>Filtering</strong>
+      <span class="glyphicon glyphicon-remove float-r x"></span>
+      <hr class="headerhr">
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <div class="filter-form">
+            <label>Søg et sted
+            </label><br/>
+            <select id="select-loc" class="selectpicker" title="Intet valgt
+              " multiple data-actions-box="true" data-width="100%">
+              <option>Frederiksberg</option>
+              <option>Slagelse</option>
+              <option>Charlottenlund</option>
+              <option>Hvidovre</option>
+              <option>Slagelse</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-0">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10  col-md-12">
+          <hr class="filter-divide">
+          <div class="filter-form">
+            <label>Husleje<small>&nbsp; Maxpris (DKK)</small></label>
+            <input id="price" type="hidden" class="range-slider" value="0,50000" />
+            
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-0">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10  col-md-12">
+          <hr class="filter-divide">
+          <div class="filter-form">
+            <label>Boligareal<small>&nbsp; m<sup>2</sup> (bbr)</small></label>
+            <input id="boli" type="hidden" class="range-slider2" value="23" />
+          </div>
+          <div class="col-lg-2">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10  col-md-12">
+          <hr class="filter-divide">
+          <div class="filter-form">
+            <label>Boligtype<small>&nbsp; m<sup>2</sup> (bbr)</small></label>
+            <div class="boligtype" id="htypes">
+              <button class="btype notact">Apartment </button>  <!-- appartments -->
+              <button class="btype notact">Villa</button>
+              <button class="btype notact">Villa Apartment</button> <!-- Villa apartment -->
+              <button class="btype notact">Hotel Apartment</button> <!-- Hotel appartment -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10  col-md-12">
+          <hr class="filter-divide">
+          <label>Størrelse</label><br/>
+          <div class="boligtype">
+            <select id="lrooms" class="input-md selectpicker" data-width="100%">
+              <option>Væerlesr</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <select id="bathr" class="input-md selectpicker" data-width="100.3%">
+              <option>Badeværelser</option>
+              <option>1</option>
+              <option>2</option>
+            </select>
+            <select id="bedr" class="input-md selectpicker" data-width="100.3%">
+              <option>Stuer</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <hr>
+          <div class="filter-form">
+            <label>Datepicker
+            </label><br/>
+            <select id="date-picker" class="input-md selectpicker margfix" title="Intet valgt
+              " multiple data-actions-box="true" data-width="100%">
+              <option>???</option>
+              <option>??</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <hr>
+          <div class="filter-form">
+            <label>Lejeperiode</label>
+            <div class="boligtype" id="renting">
+              <button class="rentper notact">1-12md.</button>
+              <button class="rentper notact">1-2-ar</button>
+              <button class="rentper notact">2+ ar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <hr>
+          <div class="filter-form">
+            <label>Husdyrtilladt</label>
+            <div class="boligtype">
+              <button class="yesno" >Ja</button>
+              <button class="yesno">Nej</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <hr>
+          <div class="filter-form">
+            <label>Moblaret</label>
+            <div class="boligtype">
+              <button class="yesno" >Ja</button>
+              <button class="yesno">Nej</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <hr>
+          <div class="filter-form">
+            <label>Bopaelspilgt</label>
+            <div class="boligtype">
+              <button class="yesno active">Ja</button>
+              <button class="yesno" >Nej</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <hr>
+          <div class="filter-form">
+            <label>Sog efter sagsnummer</label> <br/>
+            <input type="text" class="searchbox" id="search">
+            <input type="submit" class="searchsubmit" id="searchsubmit" value="Sog">
+          </div>
+        </div>
+      </div>
+      </div> <!-- div FILTER END -->
+      <div class="sect-res col-lg-9 col-md-12 col-sm-12 col-xs-12 "><!-- div RESULTS START -->
+      <span id="filterRes" class="glyphicon glyphicon-th-list"></span>
+      <strong>Resultater <small class="results">20 boliger</small></strong>
+      <div class="sortbox">
+        <button class="sort" >Liste</button>
+        <button class="sort active">Kort</button>
+      </div>
+      
+      <hr class="headerhr">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sortby">
+          <select class="results-sort selectpicker">
+            <option>Nyeste ovrst</option>
+          </select>
+        </div>
+        <div class="displayres col-lg-12">
+          <div class="row">
+          </div>
+        </div>
+      </div>
+      <div class="whitespace"></div>
+      </div> <!-- div RESULTS END -->
+      <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+          <button  id="filter" class="filter">Filtering</button>
+      </div>
+    </div>
+    </main> <!-- MAIN END -->
+    <div class="whitespace-foot"></div>
+    <footer class="container"> <!-- FOOTER START -->
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-4">
+        <div class="footer-header">
+          Nyheder
+        </div>
+        <div class="blog-post">
+          <strong>Blog post 1</strong>
+          <br/>
+          <small class="date">12 September 2016</small>
+          <p class="foot-desc">Nomina est nomine, est viva arorum e que sa ma nya gi sta mena</p>
+        </div>
+        <div class="blog-post">
+          <strong>Blog post 2</strong>
+          <br/>
+          <small class="date">5 September 2016</small>
+          <p class="foot-desc">Guzano e larormo un pacino maybe e deniro a la noce dodji da krisom ti otkrijem tajne...</p>
+          <br/>
+          <br/>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4">
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-4">
+        <div class="footer-header">
+          <strong>Kontakt OS</strong>
+          <p class="foot-desc lil-margin-foot">Fortael os hvad vi kan hajelpe med sa vender vi tilbage til dig inden 24 timer.</p>
+          <br/>
+          <strong>Ring os pa telefon</strong>
+          <p class="foot-desc">+45 70 2004 70</p>
+          <br/>
+          <a href="mailto:kontakt@hosuing.com"><strong class="kontakt">Kontakt Trine</strong></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="girl-wrap">
+          <span class="girl-footer">
+          </span>
+        </div>
+      </div>
+    </div>
+    </footer> <!-- FOOTER END -->
+    <div class="links"> <!-- LINKS START -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-0 col-md-5 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+          <img class="logo-small" alt="Folkmatic" src="img/logo.png">
+          <p class="links-text"> Sprog</p>
+          <select class="selectpicker" data-width="43%" data-style="btn-warning">
+            <option>Dansk</option>
+            <option>Englsk</option>
+          </select>
+          <br/>
+          <p class="links-text">
+          Timelde dig vores milingliste</p>
+          <div class="form-wrap">
+            <input class="mlist" type="text">
+            <input class="mlist-sub" value="Send" type="submit">
+          </div>
+          <div class="addmargins"></div>
+        </div>
+        <div class="col-lg-8 col-md-7  col-sm-6 col-xs-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3  col-sm-6 col-xs-6">
+              <div class="linkbox">
+                <strong class="boxtitle">Udlej</strong>
+                <br/><br/>
+                <ul>
+                  <li><a href="#">Udlej bolig</a></li>
+                  <li><a href="#">Boligbergner</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3  col-md-3  col-sm-6  col-xs-6">
+              <div class="linkbox">
+                <strong class="boxtitle">Hjaelp</strong>
+                <br/><br/>
+                <ul>
+                  <li><a href="#">Godt at vide</a></li>
+                  <li><a href="#">Lejer</a></li>
+                  <li><a href="#">Udlejer</a></li>
+                  <li><a href="#">Okonomi</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3  col-md-3  col-sm-6  col-xs-6">
+              <div class="linkbox">
+                <strong class="boxtitle">Om os</strong>
+                <br/><br/>
+                <ul>
+                  <li><a href="#">Om Housing Denmark</a></li>
+                  <li><a href="#">Organisationen</a></li>
+                  <li><a href="#">Team Housing Denmark</a></li>
+                  <li><a href="#">Gor Karierre Hos Os</a></li>
+                  <li><a href="#">Nyheder</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3  col-md-3  col-sm-6  col-xs-6">
+              <div class="linkbox">
+                <strong class="boxtitle">Lejeboliger</strong>
+                <br/><br/>
+                <ul>
+                  <li><a href="#">Find boliger</a></li>
+                  <li><a href="#">Opret konto</a></li>
+                  <li><a href="#">Hotelljigheder</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3  col-md-3  col-sm-6  col-xs-6">
+              <div class="linkbox">
+                <strong class="boxtitle">Folg os</strong>
+                <br/><br/>
+                <ul>
+                  <li><a href="#">Youtube</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Linkendin</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3  col-md-3  col-sm-6  col-xs-6">
+              <div class="linkbox">
+                <strong class="boxtitle">Vi stotter</strong>
+                <ul>
+                  <li><a href="#"><img class="img-link" alt="Sos..." src="img/links/sos.png"></a></li>
+                  <li><a href="#"><img class="img-link" alt="Sos..." src="img/links/8.png"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="clearfix">
+              <div class="col-lg-6 col-lg-offset-0 col-md-3 col-md-offset-0  col-sm-6 col-sm-offset-6 col-xs-12">
+                <div class="linkbox">
+                  <strong class="boxtitle">Priser</strong>
+                  <ul class="wrapimages">
+                    <li><a href="#"><img class="img-link" alt="Gazelle 1" src="img/links/gazelle.png"></a></li>
+                    <li><a href="#"><img class="img-link floatthis" alt="Gazelle 1"  src="img/links/gazelle.png"></a></li>
+                    <li><a href="#"><img class="img-link floatthis" alt="Gazelle 1"  src="img/links/gazelle.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+        <div>
+        </div>
+        </div> <!-- LINKS END -->
+        <script type="text/javascript">
+        </script>
+      </body>
+    </html>

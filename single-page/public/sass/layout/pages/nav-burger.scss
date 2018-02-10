@@ -1,0 +1,117 @@
+$ham-width-md: 40%;
+$ham-width-sm: 50%;
+$ham-width-xs: 80%;
+
+@include animation-from-to(page-md, (left, 0), (left, -$ham-width-md));
+@include animation-from-to(page-sm, (left, 0), (left, -$ham-width-sm));
+@include animation-from-to(page-xs, (left, 0), (left, -$ham-width-xs));
+@include animation-from-to(pop-md, (width, 0), (width, $ham-width-md));
+@include animation-from-to(pop-sm, (width, 0), (width, $ham-width-sm));
+@include animation-from-to(pop-xs, (width, 0), (width, $ham-width-xs));
+
+@include animation-from-to(page-md-cl, (left, -$ham-width-md), (left, 0));
+@include animation-from-to(page-sm-cl, (left, -$ham-width-sm), (left, 0));
+@include animation-from-to(page-xs-cl, (left, -$ham-width-xs), (left, 0));
+@include animation-from-to(pop-md-cl, (width, $ham-width-md), (width, 0));
+@include animation-from-to(pop-sm-cl, (width, $ham-width-sm), (width, 0));
+@include animation-from-to(pop-xs-cl, (width, $ham-width-xs), (width, 0));
+
+.nav-burger-popup-open,
+.nav-burger-popup-close { 
+	display: block;
+} 
+
+.page-full-open {
+	@include screen(medium) { animation: page-md 0.5s ease-out; left:-$ham-width-md; };
+	@include screen(small)  { animation: page-sm 0.5s ease-out; left:-$ham-width-sm; };
+	@include screen(xsmall) { animation: page-xs 0.5s ease-out; left:-$ham-width-xs; };			
+}
+
+.page-full-close {
+	@include screen(medium) { animation: page-md-cl 0.5s ease-out; left:0; };
+	@include screen(small)  { animation: page-sm-cl 0.5s ease-out; left:0; };
+	@include screen(xsmall) { animation: page-xs-cl 0.5s ease-out; left:0; };			
+}
+
+.page-full {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+.nav-burger-popup {
+	display: none;
+	position: fixed;	
+	height: 100%;
+	width:30%;	
+	top:0;
+	right: 0;
+	background: $darkblue;
+	@include screen(large) { display: none; };
+}
+
+.nav-burger-popup-open,
+.nav-burger-popup-close { 
+	display: block;
+} 
+
+.nav-burger-popup-open { 
+	@include screen(medium) { animation: pop-md 0.5s ease-out; width: $ham-width-md };
+	@include screen(small)  { animation: pop-sm 0.5s ease-out; width: $ham-width-sm };
+	@include screen(xsmall) { animation: pop-xs 0.5s ease-out; width: $ham-width-xs };		
+}
+
+.nav-burger-popup-close { 
+	@include screen(medium) { animation: pop-md-cl 0.5s ease-out; width: 0 };
+	@include screen(small)  { animation: pop-sm-cl 0.5s ease-out; width: 0 };	
+	@include screen(xsmall) { animation: pop-xs-cl 0.5s ease-out; width: 0 };	
+}
+
+
+.nav-burger-popup > .burger-nav > .burger-top-wrap > ul,
+.nav-burger-popup > .burger-btm-wrap > ul {
+   list-style-type: none;          
+}
+
+.nav-burger-popup > .burger-btm-wrap {
+	z-index: -999999;
+}
+
+.nav-burger-popup > .burger-nav > .burger-top-wrap,
+.nav-burger-popup > .burger-btm-wrap,
+.nav-burger-popup > .burger-nav > .burger-top-wrap > ul {
+    @include flex-center; 	
+}
+
+.nav-burger-popup > .burger-nav > .burger-top-wrap {
+	@include size(100%, 73px);
+	@include screen(small) { height: 64px; }
+    border-bottom:1px solid $burger-line;
+} 
+
+.nav-burger-popup > .burger-btm-wrap > ul {
+	display: flex;
+	justify-content:flex-start;
+	align-items:flex-start;
+	flex-direction:column;
+	line-height: 2.5;
+	margin-left:-170px;
+	@include screen(medium) { margin-left:-165px; }	
+	@include screen(small)  { margin-left:-145px; }
+	@include screen(xsmall) { margin-left:-105px; }	
+	-webkit-padding-start:0;
+}
+
+.nav-burger-popup > .burger-nav > .burger-top-wrap > ul {
+    white-space:nowrap;    
+    line-height: 4;  
+    li {
+    	margin-right:35px;
+    	@include screen(small) { margin-right: 15px; }
+    }
+
+    li.active { 
+    	border-bottom: 4px solid $mainblue;
+     }
+    @include screen(small) { -webkit-padding-start:0; }
+}

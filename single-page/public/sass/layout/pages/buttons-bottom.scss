@@ -1,0 +1,8 @@
+.button-wrap {
+	@include container(100%, block);
+	@include next-el-distance(70px, 70px);
+	button {
+		display: block;
+		@include mcenter;
+	}
+}

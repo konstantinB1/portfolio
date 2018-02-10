@@ -1,0 +1,74 @@
+.button-pink {
+	border:1px solid $pink;
+	background: white;
+	height: 40px;
+	width:180px;
+	display: block;
+	cursor: pointer;
+	margin-bottom:20px;
+	text-align: left;
+	&:hover {
+		border:1px solid darken($pink, 10%);
+	}
+	span:first-child {
+        display: inline-block;
+	 	margin-top:10px;
+	}
+}
+
+.button-new-post,
+.button-delete-post {
+	appearance:none;
+	border:0;
+	border-radius: 4px;
+	cursor: pointer;	
+	transition:0.2s;	
+	position: relative;
+	span {
+		width:100%;
+		position: absolute;
+		left:25px;
+		top:11px;
+	}
+}
+
+.btn-delete {
+	cursor: pointer;
+	background: transparent;
+	border: 1px solid $lgreen;
+	padding:5px;
+	border-radius: 3px;
+	height: 40px;
+	width:32%;
+	&:hover {
+	}
+}
+
+.button-new-post {	
+	@include size(190px, 37px);	
+	@include get-icon('pencil.png', null, $orange);
+	@include icon-modify(10%, 90%);		
+	&:hover {
+		@include get-icon('pencil.png', false, $lgreen);
+		@include icon-modify(10%, 90%);				
+	}	
+}
+
+.button-delete-post {	
+	@include size(40px, 37px);	
+	@include get-icon('delete.png', false, #FF6E6E);
+	@include icon-modify(45%, 50%);		
+	&:hover {
+		@include get-icon('delete.png', false, darken(#FF6E6E, 3%) );
+		@include icon-modify(45%, 50%);				
+	}	
+}
+
+.button-admin-posts-filter {
+	border:1px solid #E5E5E5;
+	border-right:0;
+	border-radius: 8px 0 0 8px;
+	height: 37px;
+	width:120px;
+	background: linear-gradient(to top, rgba(242, 242, 242, 1) 20%, rgba(240, 240, 240, 1) 70%)
+}

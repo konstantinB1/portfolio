@@ -1,0 +1,63 @@
+
+
+.welcome-wrap {
+	position: relative;
+	@include container(100%, block);
+
+	.welcome-img,
+	.welcome-text {
+		width:100%;
+	}
+
+	.welcome-text {
+	    position: absolute;
+		@include screen(medium) { p { width:50%; } }
+	}
+
+	.welcome-text > .welcome-icon-family {
+		height: 80px;
+		@include get-icon('icon-family.png');
+		background-position: 50%;
+	}
+
+	.welcome-text {
+		color:$white;
+		text-align: center;
+		top:20%;
+		p { width:30%; @include mcenter; }
+	}
+
+
+	@include screen(medium) {  
+		.welcome-text {
+			top:27%;
+			p { width:50%; }
+		}  	
+	}
+
+	@include screen(small) {
+
+		.welcome-text {
+			@include mcenter;
+			display: table;
+			position: relative;
+			width:90%;
+			height: 150px;
+			margin-bottom:20px;
+			p, h1 {
+				color:$darkblue;
+				width:100%;
+			}
+		}  
+		.welcome-text > .welcome-icon-family {
+			@include get-icon('icon-family-small.png', null);
+			@include icon-modify(50px, 50%);
+			margin-bottom:-20px;
+		}	
+	}
+
+	@include screen(xsmall) {
+		.welcome-text { margin-bottom: 20px; }  
+	}
+
+}

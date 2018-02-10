@@ -1,0 +1,122 @@
+.btn {
+	@include font-size($font_reg);	
+	position: relative;
+	height: 40px;
+	letter-spacing: 0.5px;
+	line-height: 1.5;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+.btn-shop-mycart {
+	@include buttonType($white, $orange, $orange, 150px);
+	padding-left:20px;	
+}
+.btn-shop-mycart-small {
+	@include buttonType($white, $orange, $orange, 40px);
+	padding-left:20px;	
+	top:-3px ;
+	height: 35px;
+}
+.btn-shop-basket {
+	@include buttonType($orange, $orange, $white, 150px);
+	position: relative;
+	padding-left:20px;	
+	margin-top:10px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-catalog-white {
+	@include buttonType($dark_blue, $dark_blue, $white, 150px);
+}
+
+.btn-catalog-blue {
+	@include buttonType($white, $dark_blue, $dark_blue, 150px);	
+}
+
+.btn-action {
+	@include buttonType($white, $tomato, $tomato, 70px);
+	font-weight: $bold;
+}
+
+.btn-new {
+	@include buttonType($green, $green, $white, 70px);
+	font-weight: $bold;	
+}
+ .btn-transparent-collapse {
+	width: 40px;  	
+	border:0;
+}
+
+.btn-dropdown {
+	position: relative;
+	background: transparent;
+	line-height: 1.5;
+	height: 40px;
+	width: 150px;
+	display: inline-block;
+	cursor: pointer;
+	border:0;
+}
+
+.drop-myaccount {
+	color: $dark_blue;
+	font-weight: $normal;
+}
+
+.arrow {
+	width: 30px;
+	height: 30px;
+	background: $dark_blue;
+	position: absolute;
+	border: 1px solid $dark_blue;
+	border-radius: 50%;	
+	top:50%;		
+	cursor: pointer;
+}
+
+.arrow-car {
+	width: 30px;
+	height: 30px;
+	background: $dark_blue;
+	position: absolute;
+	border: 1px solid $dark_blue;
+	border-radius: 50%;	
+	top:50%;		
+	cursor: pointer;
+	z-index: 1;	
+}
+
+.arrow-car:hover {
+	opacity: 0.8;
+}
+
+.arrow-car:first-child {
+	left:50px;
+}
+
+.arrow-car:last-child {
+	right:50px;
+}
+
+.arrow:hover {
+	opacity: 0.8;
+}
+
+.arrow:first-child {
+	left:-35px;
+}
+
+.arrow:last-child {
+	right:-35px;
+}
+
+@media #{$headerbreak} {
+	
+}

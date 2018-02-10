@@ -1,0 +1,153 @@
+@mixin container($width, $display: null) {
+  display: $display;
+	width:$width;
+	min-height: 1px;
+  @include mcenter;
+}
+
+@mixin block-parent($children) {
+  display: block;
+  @for $i from 1 through $children {
+    @if $children == 1 { &:first-child(#{$i}) { float:left; } }
+
+    &:nth-child(#{$i}) { 
+      float:left; 
+      @content;
+    } 
+  }
+  &:after, &:before {
+    display: table;
+    clear:left;
+    content: "";
+  }
+}
+
+@mixin border-radius($l) {
+  @if type-of($l) != list {
+    border-radius: $l;
+  }
+  @else {
+    border-top-left-radius:     nth($l, 1);
+    border-top-right-radius:    nth($l, 2);
+    border-bottom-left-radius:  nth($l, 3);
+    border-bottom-right-radius: nth($l, 4);
+  }
+}
+
+@mixin next-el-distance($top:null, $bot:null) {
+  margin-top: $top;
+  margin-bottom: $bot;
+}
+
+@mixin input-contact {
+    border-radius: 7px;
+    border:1px solid #C8C8C8;
+    background: $white;
+}
+
+@mixin get-icon($name, $list:false) {
+  @if $list {
+    background: url($path-icons + map-get($list, $name)) no-repeat;
+  }
+  @else {
+    background: url($path-icons + $name) no-repeat;    
+  }
+}
+
+@mixin icon-modify($bg-size:null, $bg-pos: null) {
+  background-size: $bg-size;
+  background-position: $bg-pos;
+}
+
+@mixin mcenter {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+@mixin link($color, $hover, $decoration: none) {
+  color:$color;
+  text-decoration: none;
+  &:hover {
+    color:$hover;
+    text-decoration: $decoration;
+  }
+}
+
+@mixin clear($float) {
+	clear: $float;
+	content: "";
+  display: table;
+}
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin absolute-center($width, $height) {
+   @include size($width, $height);
+   position: absolute;
+   bottom:0;
+   top:0;
+   right:0;
+   left:0;
+   margin:auto;
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin vertical-align-reset {
+    position: static;
+    top: none;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);  
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items:center;
+    justify-content:center;  
+}
+
+@mixin scale-prop($base, $list, $prop) {
+  #{$prop}: $base;
+  $len: length($list);
+  @if(length($list) != 0) {
+     @for $i from 1 through $len {
+      @include screen(nth($bp-list, $i)) { font-size: nth($list, $i); }
+      @if (nth($list, $i) == null or nth($list, $i) == 0) { $i: $i + 1 }
+     } 
+  }      
+}
+
+@mixin txt($base, $list: null) { @include scale-prop($base, $list, font-size); }
+
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin animation-from-to($name, $list-from, $list-to) {
+  @keyframes #{$name} {
+    from {
+      #{nth($list-from, 1)}: #{nth($list-from, 2)};
+    }
+    to {
+      #{nth($list-to, 1)}: #{nth($list-to, 2)};
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// ==========================================================================
+//  Text weights
+// ==========================================================================
+
+	.font-xthin         {  @include Montserrat-Extra-Thin; }
+	.font-thin          {  @include Montserrat-Thin; }	
+	.font-light         {  @include Montserrat-Light  ; }
+	.font-regular       {  @include Montserrat-Regular; }
+	.font-medium        {  @include Montserrat-Medium; }	
+	.font-bold          {  @include Montserrat-Bold; }
+	.font-black         {  @include Montserrat-Black ; }
+
+// ==========================================================================
+//  Size classes
+// ==========================================================================
+
+
+	.text-xl             {  @include txt(50px, null 47px 35px 35px);  }
+	.text-md             {  @include txt(30px, null 27px 23px 21px);  }	
+	.text-base           {  @include txt(18px, null 17px 16px 15px); }
+	.text-ptitle         {  @include txt(17px, null 17px 16px 15px); }	
+	.text-sm             {  @include txt(15px, 14px null 15px); }
+	.text-xs             {  @include txt(13px, null null 12px); }	
+	.text-cauthor        {  @include txt(17px, null null 12px); }	
+	.text-post-table     {  @include txt(14px, 14px null 12px); }	
+	.text-post-title     {  @include txt(14px, 14px null 12px); }
+	.text-nav            {  @include txt(14px, 14px null 12px); }	
+	.text-usernav-left   {  @include txt(13px, 13px 13px 20px 20px); }
+	.text-usernav-right  {  @include txt(13px, 13px 13px 15px 15px); }		
+
+	.text-heading-green  { 
+		background: $lgreen; 
+		text-align: center;
+		padding:20px;	
+	}		
+
+    .text-center         { text-align: center; }
+    .text-left           { text-align: left; }
+
+	.text-white          { color: white; }
+	.text-dark           { color: $dark; }	  
+	.text-pink           { color: $pink; }
+	.text-error          { color: $error; }	
+	.text-gray           { color: #8B8B8B; }	
+	.text-highlight      { color: white; background: $pink; padding:1px;}

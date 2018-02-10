@@ -1,0 +1,35 @@
+<div data-editable data-name="main-content">
+	<div class="post-popup">
+		<p class="post-popup-close text-lg font-medium"> X </p>
+		<div class="admin-add-post">
+				<div class="error-field"></div>
+			<div id="status" class="status">
+			</div>
+			<div class="fields">
+				<form data-ajax="true" method="post">
+					<div class="field-wrap">
+						<input class="input-post-add" type="text" name="post_title" id="post_title" value="" placeholder="Post title">
+					</div>
+					<div class="field-wrap">
+						<input class="input-post-add" type="text" name="post_desc" id="post_desc" value="" placeholder="Post Description">
+					</div>
+					<div id="editor" class="font-light text-sm field-wrap">
+					</div>
+					<input type="hidden" class="input-post-add" name="post_content" id="post_content" />
+					<div class="checkbox-wrap">
+						<div id="allow-comments" class="checkbox-pink checkbox-active" role="checkbox" aria-checked="trueyyyy" ></div>
+						<span class="text-xs font-light">Allow comments</span>
+						<input type="hidden" id="post_allow_comments" name="post_allow_comments" value="1">
+					</div>
+					<div class="checkbox-wrap">
+						<div id="post-is-visible" class="checkbox-pink checkbox-active" role="checkbox" aria-checked="false" ></div>
+						<span class="text-xs font-light">Post is visible </span>
+						<input type="hidden" id="post_visible" name="post_visible" value="1">
+					</div>					
+					<input type="hidden" id="post_id" name="post_id" value="">
+					<input type="submit" class="post-add-submit text-lg font-medium" name="admin-submit-post" id="admin-submit-post" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

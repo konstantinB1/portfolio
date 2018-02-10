@@ -1,0 +1,17 @@
+{
+  "name": "folk",
+  "version": "1.0.0",
+  "description": "One of my first projects. The assigment was to make little more complex AJAX requests to an existing JSON file simulatying dummy database. This was made when i was just few months in learning programming so the code is awfuly written and structured but it was working.\r Used Bootstrap, Javascript, jQuery",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "server": "http-server ./dist"
+  },
+  "author": "Konstantin",
+  "license": "ISC"
+}

@@ -1,0 +1,14 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="description" content="My blog website">
+<?= 
+    $this->inlineScript()
+         ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js')                 
+         ->appendFile($this->basePath('js/global.js'))                         
+         ->appendFile($this->basePath('js/scripts.js'));      
+         
+    $this->headLink()->appendStylesheet('/css/style.css?i=' . mt_rand() );
+    
+    echo $this->headLink();
+
+?>

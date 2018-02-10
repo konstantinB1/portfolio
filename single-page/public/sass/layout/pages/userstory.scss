@@ -1,0 +1,54 @@
+.userstory-no-flexbox {
+    display: block;
+    overflow-y: hidden;
+    @include scale-prop(550px, 550px 350px 500px, height);
+    .userstory-textfield,
+    .userstory-image  {
+		width:50%;
+		float:left;
+		height: 100%;	    
+	}
+	&:after, &:before { @extend %clearfix; }
+}
+
+.userstory-flexbox {
+	display: flex;
+	flex-flow: row-wrap;	
+	@include screen(small) { flex-direction:column; }
+	justify-content:flex-start;
+}
+
+.userstory {
+	@include container(100%);
+	@include next-el-distance(40px, 70px);
+
+    .userstory-textfield,
+    .userstory-image  {
+		width:50%;
+		@extend %clearfix;
+		@include screen(small) { width:100%; }		    
+	}
+
+    .userstory-textfield {
+	    @include flex-center;
+	    background: $mainblue;	
+	    @include screen(small) { height: 450px; }
+	}
+
+    .userstory-textfield > .userstory-text-wrap {
+	    @include size(80%, auto);
+		text-align: center;
+	    p  { line-height: 1.2; }
+	    h2 { letter-spacing: 1px; }
+	    @include screen(small) { @include size(90%, auto); }
+	}
+
+    .userstory-image {
+	    background:$white;
+		.userstory-guy-drink {
+			width:100%;
+			margin-bottom:-4px;
+		}
+	}
+
+}

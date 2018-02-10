@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+    <title> Interviewkata</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link href="css/mocha.css" rel="stylesheet" />       
+        <title>hello there</title>
+        
+    </head>
+    <body>
+
+        <h1 class="head"> Testing </h1>
+
+        <hr>
+
+        <div id="mocha"></div>
+        <div id="messages"></div>
+        <div id="fixtures"></div>
+
+        <hr>
+
+        <h1 class="head"> Output </h1>
+        <div class="container">
+        </div>
+        <script src="//localhost:35729/livereload.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.0/mocha.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.0/chai.js"></script>
+        <script src="app-jq.js"></script>
+        <script>
+        mocha.setup('bdd');
+        var expect = chai.assert;
+        </script>
+        <script src="app-test-jq2.js"></script>
+        <script>
+        mocha.run();
+        </script>
+    </body>
+</html>

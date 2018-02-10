@@ -1,0 +1,54 @@
+.next-prev {
+
+	 @include container(100%, flex);
+	 margin-bottom:50px;
+
+	.next, .prev, .home {
+		@include flex-center;
+		cursor: pointer;
+		background: $mainblue;
+		height: 200px;
+		&:hover {
+			background: $darkblue;
+		}
+		@include screen(small) {
+			height: 125px;
+		}
+	}
+    .next .icon-next,
+    .prev .icon-prev {
+        @include size(35px, 35px);    	
+    }
+
+	.next .icon-next {
+		@include get-icon('icon-arrow-circle-next.png');
+		@include icon-modify(90%, 0);
+		@include screen(xsmall) { @include icon-modify(80%, 0);  }
+		margin-left:15px;
+	}
+
+	.prev .icon-prev {
+		@include get-icon('icon-arrow-circle-prev.png');
+		@include icon-modify(90%, 0);
+		@include screen(xsmall) { @include icon-modify(80%, 0); }
+		margin-right:15px;
+	}	
+
+	.next, .prev {
+		width:43%;
+		@include screen(small) {
+			width:50%;		
+		}
+	}
+
+    .home {
+		border-left: 1px solid $darkblue;
+		border-right:1px solid $darkblue;    	
+    	width:calc(30% - 2px);
+ 		@include screen(small) {
+			display: none;
+		}   	
+    }
+
+
+}

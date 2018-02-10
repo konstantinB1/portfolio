@@ -1,0 +1,88 @@
+.full-width-navbar {
+
+	background: $lgray;
+	margin:0;
+    @include size(100%, 55px);
+    box-shadow: 2px 4px 6px -4px rgba(186,186,186,0.7);
+
+	.main-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items:flex-start;
+		@include generic-container;
+		@include screen(small) { 
+			flex-direction: column;		
+		}
+	}
+
+	.main-nav .menu-burger {
+		@include screen(small) { 
+			display:block; 
+		}
+		@include get-icon('menu.png')
+		@include icon-modify(100%, 100%);
+		@include size(34px, 34px);
+		display:none;	
+		margin-top:11px;
+		cursor: pointer;
+		transition:0.3s;
+		&:hover {
+			@include get-icon('menu-hov.png')
+			@include icon-modify(100%, 100%);			
+		}	
+	}
+
+	.main-nav ul.left-nav,
+	.main-nav ul.right-nav {
+		list-style-type: none;
+		position: relative;
+		width:45%;
+		padding:0;
+		z-index: 555;
+		@include screen(small) {
+			width:100%;
+			display: none;
+		}
+
+		li {
+			display: inline-block; 
+			@include screen(small) {
+				width:100%;
+				line-height: 2.4;
+			}
+		}
+	}
+
+	.main-nav ul.left-nav {
+		margin-top: 17px;
+	}	
+
+	.main-nav ul.right-nav {
+	    text-align: right;
+	    position: relative;
+		@include screen(small) {
+			text-align: left;
+		}
+	}		
+
+	.main-nav ul.left-nav li a {
+		margin-right: 25px;
+		&:nth-child(3) {
+			margin-right:0;
+		}
+	}	
+
+	.main-nav ul.right-nav li {
+		margin-left: 25px;
+		margin-top:-60px;
+		position: relative;
+		@include screen(small) {
+			margin-left: 0;
+		}		
+		&:last-child {
+			top: 5px;
+		}
+	}	
+
+
+}

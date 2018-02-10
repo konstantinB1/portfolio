@@ -1,0 +1,11 @@
+.text-editor-wrap {
+	@include size(90%, 450px);
+	@include mcenter;
+	margin-top:50px;
+	padding:30px;
+
+	.text-editor-core {
+		@include size(100%, 100%);
+		@include Montserrat-Light;
+	}
+}

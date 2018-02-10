@@ -1,0 +1,15 @@
+.red {
+  color: red; }
+
+body {
+  background: url("../img/rec1.png"); }
+
+div {
+  background: gray;
+  width: 500px;
+  height: 500px; }
+  div p {
+    background: yellow;
+    color: white; }
+  div:hover {
+    background: black; }

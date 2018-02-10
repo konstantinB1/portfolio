@@ -1,0 +1,6 @@
+.link-nav              { @include link($darkblue, $mainblue); }
+.link-login            { @include link($mainblue, $darkblue); }
+.link-login-spec       { @include link($darkblue, $darkblue, underline); }
+.link-burger           { @include link($white, $mainblue); letter-spacing: 0.4px; }
+.link-burger-innactive { @include link($link-innactive, $mainblue); letter-spacing: 0.4px; }
+.link-browser-sup      { @include link($white, null, underline);	}

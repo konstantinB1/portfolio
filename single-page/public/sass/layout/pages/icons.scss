@@ -1,0 +1,107 @@
+// ==========================================================================
+// Local variables
+// ==========================================================================
+  
+    $icons-bar: (
+         camera:        'icon-camera.png',
+         doctor:        'icon-doctor.png',
+         book:          'icon-book.png',
+         jar:           'icon-jar.png'
+    ); 
+
+    
+
+// ==========================================================================
+// Content
+// ==========================================================================
+
+.icons {	
+	@include size(100%, 200px);
+	position: relative;
+	background: $cream;
+	top:-80px;
+	@include screen(medium) {
+		top:-10px;
+		border-bottom: 1px solid $cream;
+    	margin-bottom:70px;		
+	}
+	@include screen(small) {
+		@include mcenter;
+    	background: $white;
+    	width:90%;
+    	top:0;
+    	margin-bottom:240px;
+		border-bottom: 0;  		
+	}
+	@include screen(xsmall) { margin-bottom:280px; }	
+	.icons-bar {
+		@include container(70%);
+		position: relative;
+		height:50%;
+		@include vertical-align;
+		@include screen(medium) { height:67%; }
+	}
+	.icons-bar .icon-item {
+	   float:left;
+	   width:25%;
+	   @include screen(medium) { width:25%; }
+	   @include screen(small) {
+	   	  width:50%;
+	   	  padding:20px;
+	   	  margin-bottom:15px;
+	   }  
+	   @include screen(xsmall) {
+	   	  clear:left;
+	   	  content: "";
+	   	  display: table;
+	   	  width:35%;
+	   }   
+	}
+
+	.icon-item .icon-wrap {
+		height: 50px;
+		margin:auto;	
+		@include screen(small) {
+			float:left;		
+			width:20%;
+			margin-bottom: 18px;
+		}
+		@include screen(xsmall) {
+			margin-left:-30px;
+			margin-bottom: 0;		
+		}
+	}
+
+	.icons-bar .icon-item .icon-wrap,
+	.icons-bar .icon-item .icon-text {
+		width:100%;
+	}
+
+	.icons-bar .icon-item > .icon-doctor { @include get-icon('icon-doctor.png'); }
+	.icons-bar .icon-item > .icon-jar    { @include get-icon('icon-jar.png');  }
+	.icons-bar .icon-item > .icon-book   { @include get-icon('icon-book.png'); }
+	.icons-bar .icon-item > .icon-camera { @include get-icon('icon-camera.png'); }
+
+	.icons-bar .icon-item > .icon-doctor,
+	.icons-bar .icon-item > .icon-jar,
+	.icons-bar .icon-item > .icon-book, 
+	.icons-bar .icon-item > .icon-camera {
+		@include icon-modify(45px, 50%);
+		@include screen(medium) { background-size:41px; }
+		@include screen(small)  { background-size:47px; }
+		@include screen(xsmall) { background-size:26px; }				
+	}
+
+	.icons-bar .icon-item .icon-text {
+	    width:80%;   
+	    margin-top:10px;
+	    text-align: center;
+	    @include mcenter;
+	    @include screen(xsmall) {
+	        display: inline-block;
+	        position: absolute;
+	        text-align: left;
+	        margin-left:20px;
+	    }
+	}
+}

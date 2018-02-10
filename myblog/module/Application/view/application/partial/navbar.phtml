@@ -1,0 +1,24 @@
+<?php
+
+$home       = $this->url('admin');
+$admin      = $this->url('admin/admin_management');
+$posts      = $this->url('admin/posts_management');
+$comments   = $this->url('admin/comments_management');
+$logout     = $this->url('admin/login_management', ['action' => 'logout']);
+$profile    = $this->url('admin/admin_management', ['action' => 'edit', 'admin_id' => '55']);
+
+?>
+<nav class="admin-nav">
+     <div class="wrapper">
+         <ul class="admin-links">
+        	 <li><a href="<?php echo $home;      ?>">Home</a></li>
+        	 <li><a href="<?php echo $posts;     ?>">Manage Posts</a></li>
+        	 <li><a href="<?php echo $comments;  ?>">Manage Comments</a></li>
+        	 <li><a href="<?php echo $admin;     ?>">Admins</a></li>		 		 		 
+         </ul>
+         <ul class="admin-userstatus">
+            <li><a href="<?php echo $profile; ?>"><?php echo $adminName; ?></a></li>  
+            <li><a href="<?php echo $logout; ?>"> Log out </a></li>                            
+         </ul>    
+     </div>
+</nav>

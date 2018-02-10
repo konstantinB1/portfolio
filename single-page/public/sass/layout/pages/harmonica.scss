@@ -1,0 +1,79 @@
+.harmonica {
+	@include container(70%, block);
+    @include screen(small) {
+        width:100%;
+    }
+
+    .harmonica-segment {
+    	width:100%;
+    	border: 1px solid $border-gray;
+    	border-bottom:0;
+        overflow: hidden; 
+    }
+
+    .harmonica-segment .harmonica-header {
+        height: 70px;
+    }
+
+    .harmonica-segment:first-child, {
+        border-radius: 15px 15px 0 0;
+    }
+    .harmonica-segment:last-child {
+    	border-radius: 0 0 15px 15px;
+    	margin-bottom:50px;	
+    }
+
+    .harmonica-segment:first-child,
+    .harmonica-segment:last-child {
+        @include screen(small) {
+            border-radius: 0;        
+        }
+    }
+
+    .harmonica-segment .harmonica-header {
+        @include flex-center;
+        cursor: pointer;
+        transition:0.4s;    
+        @include screen(xsmall) { 
+            justify-content:flex-start;
+            text-indent: 45px;
+        }
+        &:hover {
+        	background-color: $hoverblue-reg;
+        }
+    }
+
+    .harmonica-segment .harmonica-close {  
+    	@include get-icon('icon-close.png');
+        @include icon-modify(null, 96% 55%);
+    }
+
+    .harmonica-segment .harmonica-open {
+    	@include get-icon('icon-open.png');
+        @include icon-modify(null, 96% 55%)
+    }
+
+    .harmonica-segment .harmonica-close,
+    .harmonica-segment .harmonica-open {
+        background-blend-mode:color-burn;      
+    }
+
+    .harmonica-segment .harmonica-content {
+        display: block;
+        border-top:1px solid $border-gray;
+        padding:50px; 
+    }
+
+    .harmonica-segment .harmonica-content ul {
+    	margin-top:25px;
+        list-style-type: circle;
+        -webkit-padding-start:0;
+        padding-left:17px;
+        line-height: 2;
+    }
+
+    .harmonica-segment:last-child {
+        border-bottom: 1px solid $border-gray;
+    }
+
+}

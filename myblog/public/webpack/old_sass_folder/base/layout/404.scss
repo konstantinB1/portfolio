@@ -1,0 +1,10 @@
+.nopage {
+	@include generic-container;
+	margin-top:250px;
+	background: $error-light;
+	padding:20px;
+	h1, p {
+		text-align: center;
+		margin:2px;
+	}
+}

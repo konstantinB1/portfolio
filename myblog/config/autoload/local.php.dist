@@ -1,0 +1,8 @@
+<?php
+
+return [
+    'db' => [
+        'username' => 'root', // set DB username
+        'password' => '12345', // set DB password 1
+    ],
+];

@@ -1,0 +1,26 @@
+.footer {
+
+	@include container(100%, block);
+	height: 65px;
+	background: $cream;
+	position: relative;
+
+	.footer-wrap {
+		@include absolute-center(70%, 100%)
+	    display: flex;
+	    align-items:center;
+	}
+
+	.footer-wrap > .footer-left,
+	.footer-wrap > .footer-right {
+		width:50%;
+	}
+
+	.footer-wrap > .footer-right { 
+        text-align: right;
+        a img {
+        	margin-right: 7px;
+        }
+	}
+
+}

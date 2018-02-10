@@ -1,0 +1,15 @@
+{
+  "name": "interviewkata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Konstantin Bulatovic",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.30"
+  }
+}

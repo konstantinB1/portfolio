@@ -1,0 +1,103 @@
+:root {
+    --bezier-doors: .2,-0.01,.62,1.411;
+}
+
+.start-blocks {
+	width:100%;
+	height:100vh;
+	background: url('assets/dune.jpg') no-repeat center, #F3F3F3;
+	background-size: cover;
+	font-weight: 100;	
+	position: relative;
+}
+
+.block-element {
+	height:100%;	
+	width:50%;	
+	float:left;
+}
+
+.block-intro-line-split {
+	position: absolute;
+	left:50%;
+	right:50%;
+	margin:auto;
+	bottom:0;
+	width:1px;
+	height: 0px;
+	background: #FFD200;
+	animation: split-screen-intro 0.47s linear;
+}
+
+.block-index-left {
+	opacity: 0.5;
+	background: #FF4E00;
+	width:100%;
+	height: 5%;
+	position: relative;
+	right:0;
+}
+
+
+.block-var-a,
+.block-var-b {
+    background: #2F2F2F;  
+}
+
+.index-content-loader-fullwidth {
+	width:50%;
+}
+
+.block-a-intro-open-left {
+	animation: block-a-intro-open-left 1.5s cubic-bezier(var(--bezier-doors)) 0.5s;
+}
+
+.block-b-intro-move-right {
+	animation: block-b-intro-move-right 1.5s cubic-bezier(var(--bezier-doors)) 0.5s;
+}
+
+.block-b-intro-move-right-fix-right {
+	transform: translateX(1000px);		
+	display: none;	
+}
+
+.block-a-intro-move-left-fix-left {
+	transform: translateX(-1000px);		
+	display: none;	
+}
+
+@keyframes block-a-intro-open-left {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-1000px);
+	}
+}
+
+@keyframes index-content-loader {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 50%;
+	}
+}
+
+@keyframes split-screen-intro {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 100%;
+	}
+}
+
+@keyframes block-b-intro-move-right {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(1000px);
+	}
+}

@@ -1,0 +1,29 @@
+<div class="admin-add-post">
+	<h1> </h1>
+	<div id="status" class="status">
+	</div>
+	<div class="fields">
+		<form data-ajax="true" method="post" action="">
+			<label for="post_title"> Post title
+				<input type="text" name="post_title" id="post_title" value="<?= $title; ?>">
+			</label>
+			<label for="post_desc"> Post description
+				<input type="text" name="post_desc" id="post_desc" value="<?= $desc; ?>">
+			</label>
+			<label for="post_content"> Post content
+				<textarea rows="20" cols="20" name="post_content" id="post_content" >
+				<?php echo $content; ?>
+				</textarea>
+			</label>
+			<div class="checkbox-wrap">
+				<div class="checkbox checkbox-innactive" role="checkbox" aria-checked="false" ></div>
+				<span>Allow comments</span>
+				<input type="hidden" id="post_allow_comments" name="post_allow_comments" 
+				 value="<?= $allowCom; ?>">
+			</div>
+			<div class="submit-wrap">
+				<input type="submit" name="admin-submit-post" id="admin-submit-post">
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+@mixin btn-type($variant) {
+	height:32px;
+	cursor: pointer;
+	border-radius: 50px;
+	display: inline-block;	
+	padding-left: 35px;
+	padding-right:35px;	
+	
+	@if $variant == regular {
+		border:2px solid $mainblue;
+        color: $mainblue;
+        background: url($path-icons + 'icon-button-arrow.png') no-repeat, $white;       
+        &:hover {
+        	color: $darkblue;
+        	border: 2px solid $darkblue;
+            background: url($path-icons + 'icon-button-arrow-hoverb2.png') no-repeat, $white; 
+            background-position: 90%;     	
+        }
+	}
+	@else if $variant == userstory {
+		border:0;
+        color: $mainblue;
+        background: url($path-icons + 'icon-button-arrow.png') no-repeat, $white;
+        &:hover {
+        	border: 0;
+        	background: url($path-icons + 'icon-button-arrow.png') no-repeat, $hover-userstory;   
+         	background-position: 90%;       	    	
+        }
+	}	
+	@else if $variant == green {
+		border:0;
+        color: $green;
+        background: url($path-icons + 'icon-button-arrow-green.png') no-repeat, $white;
+	}		
+	background-position: 90%;
+	transition: 0.2s ease-in-out;
+	&:focus,
+	&:active {
+		outline:0;
+	}
+	span {
+		display: block;		
+		margin-top:-8px;
+		margin-left:-15px;		
+	}
+}

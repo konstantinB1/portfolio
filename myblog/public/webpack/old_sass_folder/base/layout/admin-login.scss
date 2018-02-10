@@ -1,0 +1,48 @@
+.admin-login {
+
+   @include container(85%, block);
+   @include next-el-distance(170px);
+
+   h1 {
+	   text-align: center;
+   }
+
+   .admin-form-wrap {
+	   width:55%;
+	   @include mcenter;
+	   padding:20px;
+	   border-radius: 8px;
+
+	   input {
+	   	   display: block;
+	   	   width:100%;
+		   padding: 15px 12px;
+		   &:first-child {
+		       border-radius: 7px 7px 0 0;
+			   border-bottom:0;
+		   }
+		   &:nth-child(2) {
+			   border-top: 1px dashed $lgreen;
+			   border-bottom:0;			   
+		   }		   
+	   }
+   }
+
+   .admin-form-wrap .submit-wrap {
+	   button {
+            @include size(100%, 25px);
+		   	padding:20px;
+		   	border-radius: 0 0 7px 7px;
+	   }
+
+	   button span {
+	   	   position: relative;
+	       top:-8px;
+	       letter-spacing: -0.4px;
+	   }
+
+   }
+
+
+  
+}

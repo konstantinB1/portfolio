@@ -1,0 +1,54 @@
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158" height="30.844" viewBox="0 0 158 30.844">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-4 {
+        font-size: 17px;
+        text-anchor: middle;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-4 {
+        font-family: MuseoSans-900, "Museo Sans";
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+
+      .cls-4 {
+        fill: #004df5;
+      }
+    </style>
+    <filter id="filter" x="37" y="9" width="121" height="17" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#0050ff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="230" y="57" width="31" height="30.844" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#0050ff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="241" y="67" width="9" height="11" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <path id="text-path"/>
+  </defs>
+  <text id="Company_Logo" data-name="Company Logo" class="cls-1" x="97.367" y="22.254">Company Logo</text>
+  <path class="cls-2" d="M245.5,57A15.417,15.417,0,1,1,230,72.416,15.459,15.459,0,0,1,245.5,57Z" transform="translate(-230 -57)"/>
+  <text class="cls-3" transform="translate(-230 -57) scale(1.24 1.233)"><textPath startOffset="50%" xlink:href="#text-path"><tspan class="cls-4">::</tspan></textPath></text>
+</svg>

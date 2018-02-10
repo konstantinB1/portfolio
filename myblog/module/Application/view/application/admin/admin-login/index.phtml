@@ -1,0 +1,23 @@
+<div class="admin-login">
+    <h1 class="font-regular text-lg"> Login </h1>
+    <div class="errors-pop">
+        <div class="errors-field" id="email-errors">
+        </div>
+        <div class="errors-field" id="pass-errors">
+        </div>        
+        <div class="errors-field" id="credentials">
+        </div>                
+    </div>    
+    <div class="admin-form-wrap">
+
+        <form data-ajax="true" action="<?= $this->url('admin/login_management'); ?>" method="post">
+            <input class="login-input text-sm font-regular" type="text" placeholder="Your email" name="admin_email" id="admin_email" value="">
+            <input class="login-input text-sm font-regular" type="password" name="admin_password" placeholder="Your password" id="admin_password" value="">
+            <div class="submit-wrap">
+                <button class="login-button" type="submit" role="submit" name="admin_login_submit" id="admin_login_submit">
+                <span class="text-sm font-regular">Login</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<?php
+
+$head        = $this->partial('layout/includes/head.phtml');
+$search      = $this->partial('layout/includes/search.phtml');
+$userNav     = $this->partial('layout/includes/usernav.phtml');;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<?= $head; ?>
+<title></title>
+</head>
+<body>
+<?= $search; ?>
+<?= $userNav; ?>
+<div class="content"></div>
+<?= $this->content ?>
+</body>
+</html>

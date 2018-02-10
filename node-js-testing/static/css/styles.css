@@ -1,0 +1,24 @@
+ 
+.my-blue {
+	background-color: rgb(32,55,255);
+	color: white;
+}
+.my-orange {
+	background-color: rgb(249,180,21);
+}
+
+.my-blue, .my-orange {
+	font-size:130%;
+}
+
+.head {
+	width: 100%;
+	background: #1EAA63;
+	color: white;
+	padding: 10px;
+}
+
+p {
+	background: #EFEFEF;
+	padding: 5px;
+}

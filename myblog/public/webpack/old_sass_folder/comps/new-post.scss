@@ -1,0 +1,79 @@
+.post-popup {
+    overflow: hidden;
+	@include mcenter;
+	display: none;
+    @include size(100%, 100%);
+	background: white;
+ 
+    .post-popup-close {
+	    text-align: center;
+	    cursor: pointer;
+        width:100%;
+        background: $orange;
+        transition:0.2s;
+        margin:0;
+        padding:20px;
+
+    }
+
+    .error-field {
+        margin-top:20px;
+    }
+
+    .post-popup-close:hover {
+        background: $lgreen;
+    }
+
+    .fields {
+        @include scale-prop(80%, 80% 90% 100% 100%, width);
+        @include scale-prop(80px, 80px 80px 60px 10px 10px, padding);
+    	display: block;
+    	padding:20px 120px;
+    	@include mcenter;
+          
+
+        .field-wrap {
+            position: relative;
+        }
+
+    	input, 
+        textarea {
+    		width:100%;
+    		padding:10px;
+            border:1px solid #DFDFDF;
+            @include next-el-distance(11px, 11px);
+    	}
+
+    	input::placeholder, 
+    	input,
+    	textarea {
+            @include txt(14px, 14px null 15px);
+            @include Montserrat-Light;
+    	}    	
+
+    	input[type=text] {
+    		height: 40px;
+    	}
+
+    	textarea {
+    		resize:none;
+    	}
+    }
+
+    .fields .post-add-submit  {
+	    width:50%;
+	    display: block;
+	    @include mcenter;
+	    background: white;
+	    border:1px solid #C8C8C8;
+        background: #FFB400;
+	    cursor: pointer;
+        border-radius: 2px;
+        transition:0.2s;
+    }
+
+    .fields .post-add-submit:hover  {
+        background: $lgreen;
+    }
+
+}

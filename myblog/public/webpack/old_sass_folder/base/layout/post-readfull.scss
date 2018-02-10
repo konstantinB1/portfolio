@@ -1,0 +1,38 @@
+.comment-divider {
+    @include generic-container;
+    border: 1px dashed #E3E3E3;
+}
+
+.post-readfull-wrap {
+	@include next-el-distance(100px, 100px);
+    @include generic-container;
+
+    h1:first-child {
+    	background: $lgreen;
+    	padding:20px;
+    }
+
+    .post-content {
+    	margin-top:50px;
+        @include screen(small) { margin-top:35px; }        
+    }
+
+    .post-writer {
+    	margin-top:-25px;
+        @include screen(small) { margin-top:-10px; }
+    }
+
+    .post-content .content-p {
+    	letter-spacing: 0.4px;
+    	word-spacing: 2px;
+    	line-height: 1.41;
+    }
+
+     .post-content .content-ol {
+    	letter-spacing: 0.4px;
+    	word-spacing: 2px;
+    	line-height: 1.5;
+    }   
+
+
+}

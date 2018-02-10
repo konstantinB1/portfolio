@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Working on a project">
+	<meta name="keywords" content="TV, Shop, Web, Buy, Stuff">
+	<meta name="author" content="Konstantin Bulatovic">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>		
+	<script type="text/javascript" src="js/cars.js"></script>
+	<title>Labnet Frontend Testing</title>
+</head>
+<body>
+
+<!-- Header start -->
+<header class="container-fluid">
+
+	<div class="row">
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-11"></div>
+
+	    <div class="response-nav">
+			    <div class="col-lg-8 col-md-10 col-sm-10 col-xs-11">
+				    <nav class="response-menu">
+					    <ul>
+						    <li><button class="btn btn-transparent-collapse"><span class="icon icon-search"></span></button></li>
+						    <li><button class="btn btn-transparent-collapse"><span class="icon icon-user"></span></button></li>						    
+						    <li><button class="btn btn-shop-mycart-small"><span class="icon cart-white-small"></span></button></li>
+						    <li><button class="btn btn-transparent-collapse"><span class="icon icon-menu-col"></button></li>	
+						</ul>					    
+				    </nav>			    
+			    </div>			    
+	    </div>
+
+
+			<div class="top-text-wrapper">			
+				<div class="col-lg-3 col-md-1 col-sm-2">
+					<span class="info-top text-small">
+		               Za pomoć pri kupovini, dodatne informacije i poručivanje pozovite:  <b>011 20 28 645</b>
+					</span>
+				</div>
+				<div class="col-lg-5 col-md-8 col-sm-8">			    
+				    </span>				
+					<ul class="nav-top">
+					    <li><a href="#">O nama</a></li>
+					    <li><a href="#">Kupovina</a></li>
+					    <li><a href="#">Prodajna mesta</a></li>
+					    <li><a href="#">Najčešća pitanja</a></li>
+					    <li><a href="#">Novosti</a></li>
+					    <li><a href="#">TV Shop</a></li>
+					    <li><a href="#">Blog</a></li>
+					</ul>
+				</div>	
+		    </div>				
+		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0"></div>
+	</div>
+
+    <div class="lower-header">
+		<div class="row">
+		    <div class="col-lg-2 col-md-2"></div>
+		    <div class="col-lg-4 col-md-4">
+			    <div class="logo-wrapper">
+				    <span class="logo">
+				    </span>
+				    <span class="logo-desc">
+					    <i>
+					        ...čini život jednostavnim!
+					    </i>
+				    </span>
+				 </div>
+		    </div>
+		    <div class="col-lg-4  col-md-4">
+			    <div class="myacc-wrapper">
+					<button class="btn-dropdown drop-myaccount">
+			        <span class="icon icon-user">
+			        </span>				
+					Moj nalog
+					<span class="dropdown dropdown-arrow-down">
+					</span>
+					</button>
+					<button class="btn btn-shop-mycart">
+					<span class="icon cart-white-small">
+					</span>
+					Moja korpa
+					</button>				
+				</div>
+		    </div>	
+		<div class="col-lg-2 col-md-2"></div>        
+		</div>
+		<div class="row">
+		    <div class="col-lg-2 col-md-2"></div>
+			<div class="col-lg-4 col-md-4">
+				<nav class="nav-cats">
+					<ul>
+						<li><a href="#">Sve Kategorije</a></li>
+						<li>|</li>				
+						<li><a href="#">Kuća i bašta</a></li>
+						<li>|</li>								
+						<li><a href="#">Zdravlje i lepota</a></li>
+						<li>|</li>								
+						<li><a href="#">Fitnes</a></li>											
+					</ul>
+				</nav>
+
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<div class="button-wrapper">
+					<button class="btn btn-new">
+					NOVO
+					</button>
+
+					<button class="btn btn-action">
+					AKCIJE
+					</button>	
+
+					<input type="text" class="input-field search" placeholder="Pretražite sajt...">
+			    </div>	
+			</div>	
+		    <div class="col-lg-2 col-md-2 "></div>		
+		</div>
+	</header>    
+   </div>
+
+<section class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="carousel">
+			
+				<div class="car-wrap">
+					<img class="car-image" src="img/car/nature.jpg">				
+				</div>
+				<div class="car-wrap">
+					<img class="car-image" src="img/car/nature.jpg">				
+				</div>
+			</div>	
+		</div>
+	</div>
+</section>
+
+<!-- Start top prods -->
+<main class="main container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    <div class="sect-header">
+		    <h2>TOP PROIZVODI</h2>
+		    </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>	
+		<div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+			<div id="top-products" class="product-nav">
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sneakers.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Fitnes patike</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">3.690,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/crunch.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Total crunch</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">11.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/strech.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">3690,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+						    <span class="discount">Sezonsko sniženje</span>	
+						    <img src="shop/products/acne-intensive-formula-1.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">3.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/hummel.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Znojnice</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">1.290,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sport-carape.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Sportske carape</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">2.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+					        <span class="present">POKLON</span>
+						    <img src="shop/products/oriflame.jpg" class="product" alt="#">
+					    </div>					    			        
+			        </div>		        
+				    <h4 class="product-name">Dezadorans</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">5620,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/giant-bidon.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">2.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>				    				    		    			    		
+			</div>
+		</div>
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>		
+	</div>
+</main>  
+<!-- End Top prod -->
+
+
+<section class="container-fluid">
+	<div class="row info-cont">	
+	   <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>	 
+		       <div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+			       <div class="container-fluid">
+					   <div class="rowfix">
+						   <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+							   <div class="info-gutted">
+								   <img class="part-logo" alt="#" src="img/partn/e_trustmark_logo.png"> 
+								   <p class="info-txt">
+								   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare ad ea primum, si videtur; Paulum, cum regem </p>		      
+							   </div>
+						   </div>   
+						   <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+							   <div class="info-gutted">
+								   <img class="part-logo" alt="#" src="img/partn/retailing_logo.png"> 
+								   <p class="info-txt">
+								   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare ad ea primum, si videtur; Paulum, cum regem </p>			   
+							   </div>	   
+						   </div>
+						   <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+							   <div class="info-gutted">
+								   <span class="phone"></span>
+								   <p class="info-txt-bigger">Prijavite se za <br/><b>BESPLATAN POZIV</b></p>
+							   </div>	   
+						   </div>						   
+					   </div>
+			       </div>		       
+		       </div>
+	    <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1 col-padding-clear"></div>  	 	      	   
+	</div>
+</section>
+<hr class="top-divider">
+
+<main class="main container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    <div class="sect-header">
+		    <h2>PREPORUČUJEMO</h2>
+		    </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>	
+		<div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+			<div id="new-prod" class="product-nav">
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sneakers.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Fitnes patike</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">3.690,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/crunch.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Total crunch</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">11.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/strech.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">3690,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+						    <span class="discount">Sezonsko sniženje</span>	
+						    <img src="shop/products/acne-intensive-formula-1.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">3.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/hummel.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Znojnice</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">1.290,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sport-carape.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Sportske carape</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">2.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+					        <span class="present">POKLON</span>
+						    <img src="shop/products/oriflame.jpg" class="product" alt="#">
+					    </div>					    			        
+			        </div>		        
+				    <h4 class="product-name">Dezadorans</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">5620,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/giant-bidon.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">2.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>				    				    		    			    		
+			</div>
+		</div>
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>		
+	</div>
+</main>  
+<!-- End Top prod -->
+
+<section class="container-fluid">	
+	   <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>	 
+		       <div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+					   <div class="rowfix">
+							   <div class="info-normal">
+		   						   <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+								       <div class="club-card-wrap">
+								           <img src="img/club-card.png" class="club-card"></span>		       
+								       </div>		   						   
+								   </div>  	
+								   <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12"> 
+						   			   <p class="club-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare ad ea primum, si videtur; Paulum, cum regem Persem captum adduceret, eodem flumine invectio?</p>  
+								   </div>
+								   <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">   
+								       <div class="info-button-wrap">
+										   <button class="btn btn-catalog-blue">Saznaj više</button>		       
+								       </div>								   
+								   </div>	
+							   </div>
+			       </div>		       
+		       </div>
+	    <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1 col-padding-clear"></div>  	 	      	   
+</section>
+
+<!-- End Top prod -->
+<main class="main container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    <div class="sect-header">
+		    <h2>NOVO</h2>
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>	
+		<div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+			<div id="new-prod" class="product-nav">
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sneakers.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Fitnes patike</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">3.690,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/crunch.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Total crunch</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">11.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/strech.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">3690,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+						    <span class="discount">Sezonsko sniženje</span>	
+						    <img src="shop/products/acne-intensive-formula-1.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">3.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/hummel.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Znojnice</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">1.290,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sport-carape.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Sportske carape</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">2.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+					        <span class="present">POKLON</span>
+						    <img src="shop/products/oriflame.jpg" class="product" alt="#">
+					    </div>					    			        
+			        </div>		        
+				    <h4 class="product-name">Dezadorans</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">5620,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/giant-bidon.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">2.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>				    				    		    			    		
+			</div>
+		</div>
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>		
+	</div>
+</main> 
+
+<section class="container-fluid">	
+	   <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>	 
+		       <div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+					   <div class="rowfix">
+							   <div class="info-cata">
+		   						   <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+		   						        <img class="img-kata" src="img/katalog.jpg">
+								   </div>  	
+		   						   <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+			   						   <div class="row">
+				   						   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<h2 class="info-text-cata-title">ONLINE KATALOG</h2>
+		   						                <p class="info-text-cata-desc">Prelistajte ili poručite novi katalog besplatno za zimu/jesen</p>				   						   
+				   						   </div>
+				   						   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+		   						        <div class="button-cat-wrap">
+			   						        <button class="btn btn-catalog-blue">Prelistaj Katalog</button>
+			   						        <button class="btn btn-catalog-white">Naruči Katalog</button>		   						        
+		   						        </div>				   
+				   						   </div>				   						   
+			   						   </div>
+								   </div> 
+		   						   <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+								   </div> 								   								   
+							   </div>
+			       </div>		       
+		       </div>
+	    <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1 col-padding-clear"></div>  	 	      	   
+</section>
+<main class="main container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    <div class="sect-header">
+		    <h2>PREPORUČUJEMO</h2>
+		    </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>	
+		<div class="col-lg-8 col-md-10 col-sm-10 col-xs-10">
+			<div id="new-prod" class="product-nav">
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sneakers.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Fitnes patike</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">3.690,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/crunch.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Total crunch</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">11.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/strech.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">3690,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+						    <span class="discount">Sezonsko sniženje</span>	
+						    <img src="shop/products/acne-intensive-formula-1.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">3.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/hummel.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>		        
+				    <h4 class="product-name">Znojnice</h4>
+					    <div class="old-price-wrap">
+				    
+					    </div>					    
+				    <p class="price-tag">1.290,00 RSD</p>     
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/sport-carape.jpg" class="product" alt="#">
+					    </div>			        
+			        </div>
+				    <h4 class="product-name">Sportske carape</h4>
+					    <div class="old-price-wrap">			    
+					    </div>
+				    <p class="price-tag">2.990,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+					        <span class="present">POKLON</span>
+						    <img src="shop/products/oriflame.jpg" class="product" alt="#">
+					    </div>					    			        
+			        </div>		        
+				    <h4 class="product-name">Dezadorans</h4>
+					    <div class="old-price-wrap">				    
+					    </div>				    				    
+				    <p class="price-tag">5620,00 RSD</p> 
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>	
+
+			    <div class="product-nav-item">
+			        <div class="product-img-wrapper">
+					    <div class="img-wrap-label">
+
+						    <img src="shop/products/giant-bidon.jpg" class="product" alt="#">
+					    </div>
+					    			        
+			        </div>		        
+				    <h4 class="product-name">Slim'n lift pojas za oblikovanje struka</h4>
+					    <div class="old-price-wrap">
+						    <del class="old-price">2.499,00</del>	
+						    <span class="old-price-disc">-15%</span>				    
+					    </div>
+				    <p class="price-tag">2966,00 RSD </p>
+				    <div class="stars">
+					    <span class="star"></span>
+					    <span class="star"></span>
+					    <span class="star"></span>		
+					    <span class="star"></span>				    
+					    <span class="star"></span>				    
+				    </div>
+				    <button class="btn btn-shop-basket">
+					    <span class="icon cart-orange"></span>
+					    Stavi u korpu				    	
+				    </button>		    				    
+			    </div>				    				    		    			    		
+			</div>
+		</div>
+		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>		
+	</div>
+</main>  
+</body>
+
+</html>		   						        

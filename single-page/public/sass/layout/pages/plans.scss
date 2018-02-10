@@ -1,0 +1,299 @@
+
+    $pills-border: 1px solid #ECECEC;
+
+
+// ==========================================================================
+// Pills
+// ==========================================================================
+
+.plans-main {
+    @include container(70%, block);
+    @include screen(xsmall) { width:90%; }
+    height:auto;
+}
+
+.plans-main,
+.plans-main .pill-active,
+.plans-main .pill-innactive {
+	position: relative;
+}
+
+.plans-offers {
+	z-index:-55;
+	position: relative;
+	border-top:$pills-border;
+    margin-bottom:240px;
+    @include scale-prop(87px, null 67px 57px 42px, top);
+    @include screen(medium) { margin-bottom:100px; }
+}
+
+.plans-main .pill-active,
+.plans-main .pill-innactive {
+    width:49.5%;
+	@include border-radius(20px 20px 0px 0px)
+    @include scale-prop(90px, null 70p 60px 45px, height);	
+	text-align: center;
+	cursor:pointer;
+	span {
+		display: block;
+		@include vertical-align;
+	}
+}
+
+.plans-main .pill-active {
+    float:left;
+    z-index: 555;
+    background: $white;
+    border:$pills-border;
+    border-bottom:0;
+    &:hover { background: $cream; }
+}
+
+.plans-main .pill-innactive {
+	float:right;
+	background: $pill-innactive;
+	border: 1px solid $lgray2;
+	border-bottom:0;
+}
+
+// ==========================================================================
+// Plans blocks
+// ==========================================================================
+
+.plans-offers .plans-offers-wrap {
+    margin-top:50px;
+    @include container(70%);
+    @include screen(xsmall) { width:80%; }
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-cont ul {
+  	 width:340px;
+     display: flex;
+     flex-direction:column;
+     list-style-type: none;
+     margin-top:50px;   
+     white-space: nowrap;
+     @include mcenter;
+     @include screen(xsmall) {
+        width:320px;
+     }
+     @include screen(xxsmall) {
+        width:100%;
+     }
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-cont ul li .offer-line-wrap {
+	height: 45px;
+     .offer-icon-check, 
+     .offer-icon-uncheck {
+     	display: inline-block; 
+     	float:left;
+     }
+     .offer-icon-check {
+        width:50px;
+        height: 50px;
+     	@include get-icon('icon-check.png');
+        @include icon-modify(100%, 0 2px);
+        @include size(18px, 18px);   	
+     	margin-right:20px;     	    	
+     }
+     .offer-icon-uncheck {
+     	@include get-icon('icon-uncheck.png');
+        @include icon-modify(100%, 0 1px);
+        @include size(12px, 14px);   	
+     	margin-right:23px;     	    
+     }
+     .offer-text-line {
+        display: block;
+     }
+     @include screen(388px) {
+        width:100%;
+         .offer-icon-check, 
+         .offer-icon-uncheck {    
+             background-size: 70%; 
+             margin-right:5px;
+             margin-left:-20px; 
+         }        
+     }
+}
+
+.plans-offers .plans-offers-wrap .offer-blue,
+.plans-offers .plans-offers-wrap .offer-green {
+     border-radius: 12px;
+     box-shadow: $shadow;    
+     width: 29.7%;
+     background: $white;   
+     @include screen(xsmall) { height:450px; }    
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-blue > .offer-price,
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price {
+	 padding-top:20px;
+     text-align: center;
+     line-height: 0.2;
+     .offer-permonth { 
+     	position: absolute;
+     	line-height: 1;
+     	text-align: left;
+     	margin-top:-12px;
+     	margin-left:3px;
+     }
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price > .best-price {
+     position: absolute;
+     left:-50px;
+     top:65px;
+     @include screen(xsmall) {
+        left:-40px;
+        top:45px;
+     }
+     @include screen(xxsmall) {
+        left:-30px;
+     }
+
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price > 
+.best-price > .best-price-main-wrap {
+	display: inline-block;
+}
+
+
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price > 
+.best-price > .best-price-main-wrap > .best-price-main {
+    width: 100px;
+    float:left;
+    span {
+	    position: relative;
+	    top: 20px;
+	    left:10px;
+    }
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price > 
+.best-price > .best-price-main-wrap > .best-price-main,
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price > 
+.best-price > .best-price-main-wrap > .best-price-end {
+    background: $bestvalue;	
+    height:45px;    
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price > 
+.best-price > .best-price-shadow {
+     @include size(50px, 30px);
+     background: linear-gradient(to bottom left, $bestvalue-shad 50%, transparent 50%);
+     @include screen(xsmall) {
+         @include size(40px, 20px);
+     }
+      @include screen(xxsmall) {
+         @include size(30px, 15px);
+     }    
+}
+
+.plans-offers .plans-offers-wrap 
+.offer-green > .offer-price > 
+.best-price > .best-price-main-wrap > .best-price-end {
+     width:30px;
+     float:right;
+     background: $bestvalue;
+     border-radius: 0 50% 50% 0;
+}
+
+.plans-offers .plans-offers-wrap .offer-blue {
+	 position: relative;
+     height:500px;
+     display: inline-block;
+     margin:auto;    
+     top:30px;
+}
+
+.plans-offers .plans-offers-wrap .offer-green {
+	 position: absolute;
+	 display: block;
+	 margin:auto;
+	 left:0;
+	 right:0;
+	 top:80px;
+     height:560px; 
+     z-index: 55;
+     @include screen(large) {
+        position: relative;
+        top:0;
+        bottom:0;
+        height:500px;
+     }
+}
+
+.plans-offers .plans-offers-wrap .offer-blue .offer-blue-header,
+.plans-offers .plans-offers-wrap .offer-green .offer-green-header {
+     width:100%;
+	 border-radius: 15px 15px 0 0;
+	 text-align: center;	 
+	 span {
+		 letter-spacing:1px; 
+	 }
+}
+
+.plans-offers .plans-offers-wrap .offer-blue .offer-blue-header {
+     height: 80px;
+     background: $mainblue;  
+	 padding-top:30px;	      
+}
+
+.plans-offers .plans-offers-wrap .offer-green .offer-green-header {
+     height: 95px;
+     background: $green;
+	 padding-top:36px;	        
+}
+
+.plans-offers .plans-offers-wrap .offer-blue:first-child, {
+	float:right;
+    @extend %clearfix;
+    @include screen(large) {
+        float:none;
+    }
+}
+
+@include screen(large) {
+    .plans-offers .plans-offers-wrap .offer-blue,
+    .plans-offers .plans-offers-wrap .offer-green {
+		display: block;
+		width:70%;
+		margin:80px auto;
+        top:0;
+	}
+}
+
+@include screen(small) {
+    .plans-offers .plans-offers-wrap .offer-blue,
+    .plans-offers .plans-offers-wrap .offer-green {
+        width:100%;
+    }
+}
+
+
+@include screen(xsmall) {
+    .plans-offers .plans-offers-wrap .offer-blue .offer-blue-header,
+    .plans-offers .plans-offers-wrap .offer-green .offer-green-header { 
+        height: 70px;
+        span {
+            display: block;
+            margin-top:-5px;
+        }
+    }    
+    .plans-offers .plans-offers-wrap .offer-blue,
+    .plans-offers .plans-offers-wrap .offer-green {
+         height:450px;      
+    }
+}

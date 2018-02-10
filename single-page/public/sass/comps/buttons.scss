@@ -1,0 +1,45 @@
+.btn-login {
+	@include size(85px, 33px);
+	border: 1px solid $white;
+	background: $mainblue;
+	cursor: pointer;
+    transition: 0.2s ease-in-out;
+	&:nth-child(odd)      { @include border-radius(50px 0 50px 0);
+	                        margin-right:-6px; }
+	&:nth-child(even)     { @include border-radius(0 50px 0 50px); }
+	&:hover               { background: $hoverblue-log; }
+	&:active, &:focus     { outline:0; }
+	& > span {
+		display: inline-block;
+		text-align: center;
+		margin-bottom:5px;
+		text-indent:0.25px;
+	}
+}
+
+.btn-signup {
+	@include btn-type(regular);	
+	span { line-height: 2.9; }		
+}
+
+.btn-green {
+	@include btn-type(green);
+	display: block;
+	width:100%;
+	padding:19px;	
+	@include mcenter;
+	span {
+		text-align: left;
+		position: absolute;
+		left:40px;
+	}
+}
+
+.btn-userstory {
+	@include btn-type(userstory);	
+	width:210px;
+	line-height: 3.2;
+	@include screen(medium)  { @include size(190px, 30px); }			
+	@include screen(small)   { @include size(185px, 29px); }		
+	@include screen(xsmall)  { @include size(170px, 28px);}		
+}

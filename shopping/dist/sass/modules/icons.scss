@@ -1,0 +1,128 @@
+.icon {
+	display: inline-block;
+	float:left;
+	letter-spacing: 0.5px;
+	position: absolute;
+	overflow:visible;
+}
+
+.cart-white {
+	background: url('../img/icons/c-white.svg') no-repeat;
+	width: 90px;
+	height: 55px;	
+}
+
+.cart-white-small {
+	background: url('../img/icons/c-white.svg') no-repeat;
+	background-size: 100% 100%;
+	bottom:-7px;
+	left:9px;
+	width: 18px;
+	height: 50px;	
+}
+
+.cart-orange {
+	background: url('../img/icons/c-gold.svg') no-repeat;
+	background-size: 100% 100%;
+	bottom:-4px;
+	left:9px;
+	width: 18px;
+	height: 50px;	
+}
+
+.icon-user {
+	background: url('../img/icons/user.svg') no-repeat;
+	width: 70px;
+	height:30px;
+	left:5px;	
+	top:5px;			
+}
+
+.icon-search {
+	background: url('../img/icons/search.svg') no-repeat;
+	top:5px;
+	background-size:25px;
+	width: 50px;
+	height: 50px;
+}
+
+.icon-menu-col {
+	background: url('../img/icons/menu.svg') no-repeat;
+	top:5px;
+	background-size:25px;
+	width: 50px;
+	height: 50px;
+}
+
+.dropdown {
+	display: inline-block;
+	letter-spacing: 0.5px;
+	position: absolute;
+    right: -8px;
+	width: 25%;
+	height: 50%;		
+}
+
+.dropdown-arrow-down {
+	background: url('../img/icons/down-arrow.svg') no-repeat;
+	background-size: 22% 100%;	
+}
+
+.icon-user {
+	background: url('../img/icons/user.svg') no-repeat;
+	background-size: 35% 90%;		
+	margin-left:4px;
+}
+
+.arr-prev {
+	 background: url('../img/icons/l-arrow.svg') no-repeat;		
+	 background-position: 1px 7px;
+	 left:-50px;
+}
+
+.arr-next {
+	 background: url('../img/icons/r-arrow.svg') no-repeat;
+	 background-position: 3px 7px;
+}
+
+.arr-prev, .arr-next {
+	 display: block;		
+	 background-size:40% 40%;
+	 width: 30px;
+	 height: 30px;		
+}
+
+.star {
+	display: inline-block;
+	position: relative;
+	margin-top:10px;
+	width:15px;
+	height: 25px;
+	background: url('../img/icons/star-gold.svg') no-repeat;
+	background-size: 100%;
+}
+
+.phone {
+	display: inline-block;
+	position: absolute;
+	top:40%;
+	left:25%;
+	width:40px;
+	height: 40px;
+	background: url('../img/icons/phone.svg') no-repeat;
+	background-size: 100%;	
+}
+
+@media #{$headerbreak} {
+	.cart-white {
+		background: url('../img/icons/c-white.svg') no-repeat;
+		background-size: 100% 110%;
+		width:40%;		
+	}	
+	.phone {
+		left:34%;
+	}		
+	.dropdown-arrow-down {
+        display: none;
+	}	
+}

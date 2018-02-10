@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/lazy.css">
+	<title></title>
+</head>
+<body>
+<img class="myimage" data-src="data/1.jpg">
+<div class="space"></div>
+<img class="myimage" data-src="data/2.jpg">
+<div class="space"></div>
+<img class="myimage" data-src="data/3.jpg">
+<div class="space"></div>
+<img class="myimage" data-src="data/4.jpg">
+<div class="space"></div>
+
+<script type="text/javascript" src="js/lazyload.js"></script>
+<script type="text/javascript">
+    lazy.load(['.myimage']);
+	window.addEventListener('DOMContentLoaded', lazy.init);      
+</script>
+</body>
+</html>

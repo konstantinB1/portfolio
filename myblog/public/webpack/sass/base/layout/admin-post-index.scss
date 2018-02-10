@@ -1,0 +1,203 @@
+.status-post {
+	display: none;
+    @include size(45%,140px);
+    @include mcenter;
+	background: lighten($success, 2%);
+	border:1px solid darken($gray-border, 4%);
+	border-radius: 7px;
+	margin-top:50px;
+	padding:3px;
+	text-align: center;
+	p {
+		text-align: center;
+		margin:18px auto;		
+	}
+}
+
+.page-wrapper-posts-hide {
+	opacity:0.2;
+}
+
+.page-wrapper-posts-show {
+	opacity:1;
+}
+
+.pop-delete {
+	display: none;
+	position: absolute;
+	@include size(450px, 130px);
+	@include mcenter;
+	background:#F8F8F8;
+	border:1px solid #E1E1E1;
+	border-radius: 5px;
+	top:35%;
+	bottom:0;
+	left:0;
+	right:0;
+	text-align: center;
+	z-index: 555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);	
+    button:hover {
+    	background: $lgreen;
+    }
+}
+
+.admin-posts {
+
+	@include generic-container;
+
+	margin-top:170px;
+
+    .posts-container {
+	    width:100%;
+	    border:1px solid #E6E6E6;
+	    border-radius: 5px;
+	    display: flex;
+	    flex-direction:column;
+    }
+
+    .posts-container .posts .fetched-post {
+    	width:100%;	
+    	display: flex;
+    	padding:14px;
+    	flex-flow:row-wrap;
+    	align-items:center;
+    	justify-content:space-between;
+    	&:hover {
+    		background: #F5F5F5;
+    	}
+    }
+
+      .posts-container .posts .fetched-post .edit {
+      	  list-style-type: none;
+      	  display: inline-block;
+		  width:25%;
+		  @include screen(small)  { width:35%; }
+		  li {
+		  	display: inline-block;
+		  	cursor: pointer;
+		  	margin-right:10px;	  	
+		  }
+      }   
+
+
+     .posts-container .posts .fetched-post .post-id {
+        width:80px;
+        p {
+        	margin-top:17px;
+        	margin-left:15px;
+        	@include screen(small) {
+        		text-align: center;
+             	margin-top:17px;  
+             	width:40%; 		
+        	}
+        }
+    }
+
+    .posts-container .posts .fetched-post .post-id,
+    .posts-container .posts .fetched-post .checkbox {
+    	@include screen(small) { width: 50px; }
+    }
+
+    .posts-container .posts .fetched-post .status {
+    	@include size(20px, 20px);
+    }    
+
+    .posts-container .posts .fetched-post .checkbox {
+    	@include size(4%, 100%);
+    	div {
+    		margin-top:9px;
+    		margin-left:5px;
+    	}
+    }        
+
+     .posts-container .posts .fetched-post .hidden {
+		@include get-icon('hidden-yes.png');
+		@include icon-modify(100%, 100%);
+    }
+
+     .posts-container .posts .fetched-post .visible {
+		@include get-icon('hidden-no.png');
+		@include icon-modify(100%, 100%);
+    }  
+
+    .posts-container .posts .fetched-post .post-info {
+        width:80%;
+        margin-top:3px;
+        @include screen(medium) { 
+        	width: 65%; 
+        }
+        p {
+        	margin:0;
+        }
+        p:nth-child(2) {
+        	word-spacing: 1px;
+        }
+
+    }    
+
+    .posts-container .header {
+    	@include size(100%, 50px);
+	    background: $gray-border; 
+	    display: flex;
+	    ul {
+	    	width:inherit;
+	    	text-align: right;
+	    	list-style-type: none;
+	    	padding-right:5px;
+	    }
+	    ul li {
+	    	display: inline-block;
+	    	margin: 0 9px;
+	    	.dropdown {
+	    		width:auto;
+	    	}
+	    }
+
+	    .mark-all {
+	    	display: flex;
+	    	@include flex-center;    	
+	    	height: 100%;
+	    	width:112px;
+	    	span:nth-child(2) {
+	    		margin-left:7px;
+	    		margin-top:-2px;
+	    	}
+	    }
+    }
+
+	.posts-inputs-wrap {
+		width:100%;
+		height: 50px;
+		display: flex;
+		flex-flow:row wrap;
+
+        .search-wrap {
+        	width:50%;
+            display: flex;
+            justify-content:flex-end;
+            input {
+            	width:40%;
+            }
+        }
+
+		.left-inputs {
+			width:50%;
+			display: flex;
+			flex-flow:flex-wrap;
+		}
+
+		.left-inputs button {
+			margin-right:10px;
+		}
+
+        .left-inputs .delete-posts {
+        	height: 35px;
+        	width:180px;
+        	border:1px solid $dark;
+        }
+
+	}
+
+
+}

@@ -1,0 +1,55 @@
+.link-usernav {
+	text-decoration: none;
+	color: $dark;
+	&:hover {
+		color: $pink;		
+	}
+}
+
+.link-postitle {
+	text-decoration: none;
+	color: $pink;
+	&:hover {
+		color: lighten($dark, 30%);
+	}
+	&:active,
+	&:focus {
+		color:$dark;
+	}
+}
+
+.link-default {
+	text-decoration: none;
+	color: $dark;
+	&:hover {
+		color: lighten($dark, 30%);
+	}
+	&:active,
+	&:focus {
+		color:$pink;
+	}	
+}
+
+.link-pink {
+	text-decoration: none;
+	color: $pink;
+	&:hover {
+		color: $dark;
+	}
+	&:active,
+	&:focus {
+		color:$pink;
+	}	
+}
+
+.link-nav-admin {
+	text-decoration: none;
+	color: $dark;
+	&:hover {
+		color:$pink;
+	}
+	&:active,
+	&:focus {
+		color:$dark;
+	}	
+}

@@ -1,0 +1,137 @@
+.header {
+	@include next-el-distance(null, 68px);
+	@include container(70%, block);
+	@include screen(medium) {
+		width:95%;
+		@include next-el-distance(null, 19px);		
+	}
+
+	z-index: 9999;
+
+	.nav-links {
+		width:100%;
+		@extend %clearfix;
+	}
+
+	.nav-links > ul { float:right; }
+
+	.main-navbar > .nav-center > ul,
+	.nav-links > ul {
+		list-style-type: none;
+	}
+
+	.nav-links > ul > li {
+		display: inline-block;
+		margin-right: 15px;			
+		&:last-child {
+			margin-right:0;
+		}
+	}
+
+	.main-navbar {
+		background: $white;
+		position: relative;
+		z-index:55;
+		@include screen(medium) {
+			@include vertical-align; 
+			margin-top:10px;
+			height:20px;
+		}
+	}
+
+	.main-navbar > .nav-left {
+		margin-top:-5px;
+		float:left;
+		width:15%;
+		@extend %clearfix;
+		@include screen(medium) {
+			margin-top:15px;
+			float:left;
+			width:15%;
+			@include vertical-align;
+		    .img-logo {
+			  width:130px;	
+			  margin-top:20px;
+			}
+		}
+	  .img-logo { width:120px; }
+	}
+
+	.main-navbar > .nav-center {
+		float:left;
+		width:70%;		
+		text-align: center;	
+	}
+
+	.main-navbar > .nav-center > ul {
+		li {
+			width:50px;
+			padding-bottom:30.5px;
+			margin-right:35px;
+			display: inline;		
+		}
+		li.li-active {
+			border-bottom:4px solid $mainblue;
+		}
+	}
+
+	.main-navbar > .nav-right {
+		display: inline;
+		white-space: nowrap;
+		text-align: right;	
+		margin-top:7px;
+		width:15%;		
+		float:left;
+	}
+
+	.main-navbar > .nav-right-md,
+	.nav-burger { float:right; }
+
+	.main-navbar > .nav-right-md {
+		display: none;
+		position: relative;
+		width:30%;
+		text-align: right;
+		.nav-burger {
+			margin-top:12px;
+		}	
+		@include screen(medium) {
+		  display: inline;
+		}
+	}
+
+	.nav-right-md > .nav-right-md-links {
+		display: inline-block;
+		position: absolute;
+		white-space: nowrap;
+		right:50px;
+		top:24px;
+		a { margin-right:5px; }
+	}
+
+	.nav-burger {
+	    @include size(40px, 40px);
+	    cursor: pointer;
+	    @include get-icon('icon-menu.png');
+	}
+
+	@include screen(medium) {
+		.nav-links, 
+		.nav-center,
+		.main-navbar > .nav-right { 
+			display: none; 
+		}
+	}
+
+}
+
+.header-line-small {
+	width:200%;
+	display: none;
+	z-index: 9999;
+	border:1px solid #F8F8F8;
+	@include screen(small) {
+		display: block;
+		margin-top:32px;
+	}
+}

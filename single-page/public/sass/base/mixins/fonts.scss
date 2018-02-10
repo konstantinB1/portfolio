@@ -1,0 +1,19 @@
+@mixin font-face($font-family, $font-file, $font-weight) {
+	@font-face {
+		font-family: $font-family;
+		src: url($path-fonts + $font-file) format('truetype');
+		font-weight: $font-weight;
+	}
+}
+
+@include font-face($font-family-type-thin, 'museosans_100-webfont.ttf', $font-thin);
+@include font-face($font-family-type-light, 'museosans_300-webfont.ttf', $font-light);
+@include font-face($font-family-type-normal, 'museosans_500-webfont.ttf', $font-normal);
+@include font-face($font-family-type-bold, 'museosans_700-webfont.ttf', $font-bold);
+@include font-face($font-family-type-black, 'museosans_900-webfont.ttf', $font-black);
+
+@mixin Museo-Sans-Thin   {  font-family: $museo-thin; font-weight: $font-thin; }
+@mixin Museo-Sans-Light  {  font-family: $museo-light; font-weight: $font-light; }
+@mixin Museo-Sans-Normal {  font-family: $museo-normal; font-weight: $font-normal; }
+@mixin Museo-Sans-Bold   {  font-family: $museo-bold; font-weight: $font-bold; }
+@mixin Museo-Sans-Black  {  font-family: $museo-black; font-weight: $font-black; }

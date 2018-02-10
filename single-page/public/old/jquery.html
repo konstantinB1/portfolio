@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background: #444756;
+	}
+	.el {
+		height:500px;
+		border:1px solid white;
+		width:500px;
+		margin:auto;
+		margin-bottom:10px;		
+	}
+	.par:after {
+		color: red;
+	}
+</style>
+	<title></title>
+</head>
+<body>
+<div class="par">
+	<div class="el" id="one">
+	</div>
+	<div class="el" id="two">
+	</div>
+	<div class="el" id="three">
+	</div>
+	<div class="el" id="four">
+	</div>
+	<div class="el" id="five">
+	</div>
+	<div class="el">
+	</div>
+</div>
+<p></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery-inertiaScroll.js"></script> 
+<script type="text/javascript">
+	$("#one, #two, #three").inertiaScroll({
+		parent: $('.par')
+	});
+
+  $('p:last').css({'position':'fixed', 'text-align':'left', 'color':'white'}).text($('body').scrollTop());
+</script>
+</body>
+</html>

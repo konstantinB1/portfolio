@@ -1,0 +1,28 @@
+.input-field {
+	padding:15px;
+	height: 40px;
+}
+
+.search {
+    @include font-size($font_reg);
+    color:$dark_blue;		
+	border:1px solid $dark_blue;
+	width:240px;
+	background: url('../img/icons/search.svg') no-repeat;
+	background-position: 95% 50%;
+	background-size:6.5%;
+    font-weight: 300;
+    letter-spacing: 0.5px;	
+}
+
+.search { @include placeholder {
+    @include font-size($font_reg);	
+    font-weight: 300;
+    letter-spacing: 0.5px;
+} }
+
+@media #{$headerbreak} {
+	.search {
+	    display: none;
+	}	
+}

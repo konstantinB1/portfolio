@@ -1,0 +1,52 @@
+.icon-search {
+	display: inline-block;
+	@include get-icon('search.png')
+	@include icon-modify(100%);
+	@include size(20px, 20px);
+
+	cursor:pointer;
+	&:hover {
+		@include get-icon('search-hov.png')	
+	    @include icon-modify(100%, 90%);			    	
+	}
+}
+
+.dropdown {
+	@include size(11px, 11px);
+	margin-left:6px;
+}
+
+.dropdown-img {
+	display: inline-block;
+	float:right;
+	margin-top:4px;
+}
+
+.dropdown-img-filter {
+    margin-top:1px;
+    margin-right:10px;
+}
+
+
+.icon-success {
+	display: inline;
+	@include get-icon('success.png')
+	@include icon-modify(100%, 50%);
+	@include size(55px, 55px);
+	margin-top:6px;
+}
+
+.icon-page,
+.icon-edit {
+ 	@include size(20px, 20px);   
+}
+
+.icon-edit {
+	@include get-icon('edit.png')
+	@include icon-modify(100%, 100%);
+}
+
+.icon-page {
+	@include get-icon('page.png')
+	@include icon-modify(100%, 100%);
+}

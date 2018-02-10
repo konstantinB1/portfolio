@@ -1,0 +1,20 @@
+@import "modules/grid.scss";
+
+body {
+   background: url('../img/rec1.png');
+}
+div {
+
+    background:grayscale(red);
+    width:500px;
+    height: 500px;
+
+	p {
+
+		background: yellow;
+		color:white;
+	}
+	&:hover {
+		background:black;
+	}
+}

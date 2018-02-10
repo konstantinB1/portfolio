@@ -1,0 +1,65 @@
+.blocks {
+	@include container(60%, flex);
+	@include next-el-distance(0, 150px);
+	@include screen(medium) { width:100%; }
+	@include screen(small) {
+		width:90%;
+		flex-flow: row wrap;
+		justify-content:space-between;
+	}
+
+	.block-left,
+	.block-mid,
+	.block-right {
+		margin-left:5px;
+		margin-right:5px;
+	}
+
+	.block-left,
+	.block-right {
+		@include screen(small)   { width:47%; }
+		@include screen(xsmall)  { width:46.53%; }	
+		@include screen(xxsmall) { width:46.39%; }		
+	}
+
+	.block-right img,
+	.block-left img {
+		width:100%;
+		margin-bottom:-4px;
+	}
+
+	.block-right img:first-child,
+	.block-left img:first-child { margin-bottom:5px; }
+
+	.block-mid {
+		position: relative;
+		min-width:42%;
+		background: $green;
+		@include screen(small) {
+			@include size(100%, 500px);
+			order:-1;
+			margin-bottom:30px;
+		}
+	}
+
+	.block-mid > .block-mid-textwrap {
+	    @include absolute-center(70%, 310px);
+	    @include screen(small) { width: 60%; }
+	    @include screen(xxsmall) { width: 70%; }
+
+		*  { text-align: center; }
+		p  { margin-bottom:40px; }
+		h3 { margin-bottom:0;    }
+
+	}
+
+	.block-mid > .block-mid-textwrap > .icon-plug {
+		display: block;
+		margin-bottom:-15px;
+		display: block;
+		min-height: 70px;
+		@include get-icon('icon-scope.png');
+		@include icon-modify(contain, 50%);
+	}
+
+}

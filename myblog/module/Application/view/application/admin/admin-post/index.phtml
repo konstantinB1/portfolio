@@ -1,0 +1,41 @@
+<?php
+$add  = $this->url('admin/posts_management', ['action' => 'modify-post']);
+$post = $this->partial('application/partial/newpost.phtml');
+echo $post;
+?>
+<div class="status-post" id="post-status">
+  <p class="icon-success"></p>
+  <span class="text-base font-light text-dark">Success! Post submited </span>
+</div>
+<div class="page-wrapper-post">
+  <div class="admin-posts">
+    <div class="posts-inputs-wrap">
+      <div class="left-inputs">
+        <button data-role="add" id="add-post" class="popup-role button-new-post">
+        <span class="text-xs font-regular text-left">New post </span>
+        </button>
+        <div class="button-drop-wrap">
+          <button style="display:none" data-role="delete" id="delete-post" class="button-delete-post">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="posts-container" id="posts-container">
+      <div class="header">
+        <div class="mark-all">
+          <div id="mark-all" data-checkbox="action" class="checkbox-variant correct-this-shit"></div><span  class=" text-xs font-light"> Mark all </span>
+        </div>
+      </div>
+      <div class="posts">
+      </div>
+    </div>
+    <div class="posts-footer"><span class="font-sm text-light text-dark"></span></div>
+  </div>
+</div>
+<div class="pop-delete">
+  <h3 class="font-light text-base">Confirm delete </h3>
+  <div class="buttons-wrap">
+    <button class="btn-delete" id="delete-submit" role="submit" aria-role="submit"><span class="text-sm font-light"> Do it </span></button>
+    <button class="btn-delete" id="cancel-delete"> <span class="text-sm font-light"> Cancel </span> </button>
+  </div>
+</div>

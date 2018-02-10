@@ -1,0 +1,57 @@
+// ==========================================================================
+//  Text weights
+// ==========================================================================
+
+	.font-thin         {  @include Museo-Sans-Thin; }
+	.font-light        {  @include Museo-Sans-Light; }
+	.font-normal       {  @include Museo-Sans-Normal; }
+	.font-bold         {  @include Museo-Sans-Bold; }
+	.font-black        {  @include Museo-Sans-Black; }
+
+// ==========================================================================
+//  Size classes
+// ==========================================================================
+
+	.text-welcome        {  @include txt(60px, 55px 45px 39px 35px); }
+	.text-welcome-desc   {  @include txt(22px, null 15px 14px); }
+	.text-icon-desc      {  @include txt(16px, 15px 15px); }
+	.text-pills          {  @include txt(26px, null 24px 22px 16px); }
+	.text-offer-price    {  @include txt(65px, 60px 55px 44px 35px); }	
+	.text-offer-desc     {  @include txt(19px, null null 16px); }		
+	.text-per-month      {  @include txt(18px, null null 16px); }
+	.text-offer-line     {  @include txt(15px, null null null 14px 13px); }	
+	.text-button         {  @include txt(14px); }	
+	.text-best-val       {  @include txt(14px, null null 13px); }	
+	.text-harmonica      {  @include txt(15px, null 14px 13px); }
+
+	.text-block-title    {  @include txt(40px, null 40px 35px 34px);  }
+	.text-block-desc     {  @include txt(18px, null 18px 17px 17px);  }
+
+	.text-offer-header   {  @include txt(19px, null null 20px 15px); }
+	.text-header-desc    {  @include txt(22px, null 20px 18px); }
+
+	.text-terms          {  @include txt(15px, null null 16px 15px); }
+	.text-link-btm       {  @include txt(14px, null null null 13px); }
+	.text-userstory      {  @include txt(21px, null 18px null 14px); }
+	.text-userstory-desc {  @include txt(45px, null 30px null 20px); }	
+	.text-ham-top        {  @include txt(null, 16px 17px 15px 13px); }	
+	.text-ham-btm        {  @include txt(null, 22px 21px 17px 18px); }	
+
+	.text-xl             {  @include txt(50px, null 47px 44px 41px);  }
+	.text-md             {  @include txt(30px, null 27px 23px 21px);  }	
+	.text-base           {  @include txt(18px, null 17px 16px 15px); }
+	.text-sm             {  @include txt(16px, 14px null 15px); }
+	.text-xs             {  @include txt(13px, null null 12px); }	
+
+// ==========================================================================
+//  Colors
+// ==========================================================================
+
+	.text-green       { color: $green; }
+	.text-blue        { color: $mainblue; }
+	.text-white       { color: $white; }
+	.text-darkblue    { color: $darkblue; }
+	.text-blue        { color: $mainblue; }
+	.text-pill-in     { color: $pill-inn-text; }
+	.text-offer-unc   { color: $pill-inn-text; }		
+	.text-gray        { color: $terms; }	

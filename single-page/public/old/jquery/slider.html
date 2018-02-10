@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+     
+   * {
+     	box-sizing: border-box;
+     }
+
+     body {
+     	margin:0;
+     	padding:0;
+     }
+
+	.container {
+		position: relative;
+		display: block;
+		margin: auto;
+		width:100%;
+		height: 750px;
+		overflow: hidden;
+	}
+	.container--navigator {
+		position: absolute;
+		bottom:0;
+		right:0;
+		width:100%;
+		height: 70px;
+		display: block;
+		margin:auto;
+		z-index: 60;
+		padding:20px;
+		text-align: center;
+	}
+	.container--navigator--item {
+		border:1px solid white;
+		border-radius: 2%;
+		width:20px;
+		height:20px;
+		display: inline-block;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+		margin-right:10px;
+	}
+	.container--navigator--item:hover {
+		background: #00D8FF;
+	}	
+	.container-navigator--item--active {
+		border-radius: 8%;		
+		background: white;
+		margin:5px auto;
+		width:50%;
+		height: 50%; 
+		animation: boxin 0.4s ease-in-out;
+	}
+	@keyframes boxin {
+		from {
+			opacity: 0;
+		}
+		to: {
+			opacity: 1;
+		}
+	}
+	.container--item {
+		position: absolute;
+		z-index: 55;		
+		width: 100%;
+		height: 100%;
+	}
+	.container--arrow {
+		cursor: pointer;
+		position: absolute;
+		border: 1px solid white;
+		z-index: 455;
+        top:0;
+		bottom:0;
+		margin:auto;
+		width:60px;
+		height:60px;
+		transition: 0.5s ease-in-out;
+	}
+	.container--arrow--left {
+		background: url('left.svg') no-repeat;	
+		background-size: 100% 50%;
+		background-position: left;
+		left:50px;
+        top:0;
+		bottom:0;					
+	}
+	.container--arrow--right {
+		background: url('right.svg') no-repeat;			
+		background-size: 100% 50%;
+		background-position: right;
+		right:50px;
+        top:0;
+		bottom:0;		
+		transition: 0.4s;	
+	}	
+	.container--arrow--right:hover {
+		right:45px;
+		border:1px solid #FF056F;
+	}
+	.container--arrow--left:hover {
+		left:45px;
+		border:1px solid #FF056F;
+	}	
+	@keyframes littleFade {
+		from {
+           transform: scale(1.0);
+		}
+		to {
+           transform: scale(1.04);
+		}
+	}
+	.container--item--image {
+		animation: littleFade 8s ease;
+		transform: scale(1.04);
+		display: inline;
+        width: 100%;
+        max-height: 100%;
+	}
+</style>
+	<title></title>
+</head>
+<body>
+<div class="container">
+    <div class="container--arrow container--arrow--right">
+    </div>
+    <div class="container--arrow container--arrow--left">
+    </div>    
+    <div class="container--navigator">
+	    <div class="container--navigator--item ">
+		    <div class="container-navigator--item--active">
+		    </div>
+	    </div>
+	    <div class="container--navigator--item">
+	    </div>
+	    <div class="container--navigator--item">
+	    </div>
+	    <div class="container--navigator--item">
+	    </div>	    
+    </div>
+    <div class="container--items">
+		<div class="container--item">
+			<img class="container--item--image" src="1.jpg">
+		</div>
+		<div class="container--item">
+			<img class="container--item--image" src="2.jpg">
+		</div>
+		<div class="container--item">
+			<img class="container--item--image" src="3.jpg">
+		</div>	
+		<div class="container--item">
+			<img class="container--item--image" src="4.jpg">
+		</div>		
+	 </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+
+	 function loadSlider() {
+
+	     let items = $('.container--item'), active, i = 0;
+
+	     items.hide();
+	     items.first().show();
+	     items.first().addClass('container--item--active');	 	
+
+	     function right() {
+	     	 active = $('.container--item.container--item--active');  	  
+             if(items.last().hasClass('container--item--active')) {
+             }
+             else {
+             	window.setTimeout(function() {
+		         	 $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {             	
+				         active.removeClass('container--item--active');
+				         active.fadeOut('slow');
+				         active.next().addClass('container--item--active');
+				         active.next().fadeIn('slow');       
+		         	 })		
+	             }, 150);                	           	
+             }    
+	     }
+
+	     function left() { 
+	         active = $('.container--item.container--item--active');
+             if(items.first().hasClass('container--item--active')) {
+             }
+             else {
+             	window.setTimeout(function() {
+	             	 $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+				         active.removeClass('container--item--active');
+				         active.fadeOut('slow');
+				         active.prev().addClass('container--item--active');
+				         active.prev().fadeIn('slow'); 
+	             	 })
+	             }, 150);   
+             }	          	
+	     }
+
+	     function box() {
+	     	if($(this).children().length !== 1) {
+	     		$('.container--navigator--item').children().remove();
+	     		$(this).append('<div class="container-navigator--item--active">\
+		                        </div>');
+	     	}
+
+	     }
+         
+         $('.container--navigator--item').on('click', box);
+	     $('.container--arrow--right').on('click', right);	
+	     $('.container--arrow--left').on('click', left);
+	 }
+
+loadSlider();
+</script>
+</body>
+</html>
