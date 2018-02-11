@@ -4,8 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "webpack -d --watch",
-    "build": "webpack --env production"
+    "dev": "webpack -d --watch --env production",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",

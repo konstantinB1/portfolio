@@ -44,7 +44,9 @@
 
 .admin-posts {
 
-	@include generic-container;
+	width:55%;
+	@include mcenter;
+	@include scale-prop(55%, 65% 70% 80% 95%, width);
 
 	margin-top:170px;
 

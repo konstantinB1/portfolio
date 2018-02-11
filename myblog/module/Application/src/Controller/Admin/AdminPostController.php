@@ -35,6 +35,14 @@ class AdminPostController extends AbstractActionController
     {
     }
 
+     /**
+     * Add action
+     */
+    public function addAction()
+    {
+    }
+   
+
     /**
      * XHLHttpRequest only fetching individual post by id
      *

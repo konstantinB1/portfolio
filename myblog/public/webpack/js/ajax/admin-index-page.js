@@ -57,6 +57,8 @@
 
 	var writeData = function( data ) {
 
+		console.log(data)
+
 	    var container = $( '.posts-container .posts' )
         container.html(' ')
 
@@ -241,12 +243,13 @@
 		$( '#post-status' ).hide()
 		popup.fadeIn( 255 ) 
 		popupCleaning()
-	    form.off( 'submit' )
 
-        form.on( 'submit', function( ev ) {
+		form.off( 'submit' )
+
+        form.one( 'submit', function( ev ) {
 
 		    var ajax = new AjaxInputPost( 'admin/posts/process', function( data ) {
-
+        	console.log(123)
 			    if ( data[ 0 ] !== 'success' ) {
 	                $('.error-field').fadeIn( 255 )
                     $('.error-field').displayErrors({ data: data[ 0 ] })	   		    
@@ -435,15 +438,15 @@
 		$( '.status' ).click( changeVisibility )
 	    $( '#add-post' ).click( addPostStuff )	
 
+		var trumbowyg =	$('#editor').trumbowyg({svgPath: '../js/ui/icons.svg'});
+		trumbowyg.on( 'tbwchange', function() { 
+			var range = trumbowyg.html();
+		    var cont  = $('#post_content').val( range )
+		 })		    
+
 		container.on( 'posts-loaded', function( ev ) {
 
 			checkboxStuff( ev )
-
-			var trumbowyg =	$('#editor').trumbowyg({svgPath: '../js/ui/icons.svg'});
-			trumbowyg.on( 'tbwchange', function() { 
-				var range = trumbowyg.html();
-			    var cont  = $('#post_content').val( range )
-			 })	
 
 			$( '.icon-edit' ).click( editPost )
 			$( '.status' ).click( changeVisibility )

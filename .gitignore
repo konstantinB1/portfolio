@@ -1,6 +1,7 @@
 filter-shop/node_modules/
 myblog/vendor/
 myblog/public/node_modules/
+myblog/.vagrant/
 node-js-testing/node_modules/
 shopping/node_modules/
 single-page/node_modules/

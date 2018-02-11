@@ -11,10 +11,7 @@
     	this.element = element
     	this.options = $.extend( {}, defaults, options )
 
-        
         $( this.element ).html( ' ' )
-
-        console.log(options)
 
     	this.makeProperArray()
     	this.appendToEl()

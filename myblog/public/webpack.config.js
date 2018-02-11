@@ -57,7 +57,6 @@ module.exports = {
 
 	// plugins	
 	plugins: [
-		new uglify(),
 		new ExtractTextPlugin(
 		{
 			filename: 'css/style.css',

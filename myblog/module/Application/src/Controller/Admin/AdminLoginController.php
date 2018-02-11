@@ -53,7 +53,7 @@ class AdminLoginController extends AbstractActionController
             $filter = $this->filter->getInputFilter()->setData($post);
 
             if (!$filter->isValid()) {
-                return new JsonModel($filter->getMessages());
+                return new JsonModel([$filter->getMessages(), 'error' => true]);
             }
 
             $email    = $this->params()->fromPost('admin_email');

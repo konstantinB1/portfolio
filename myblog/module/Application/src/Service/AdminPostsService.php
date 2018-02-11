@@ -136,17 +136,18 @@ class AdminPostsService
 
         $data = [
             'post_title'          => (string) $post->getTitle(),
-            'post_desc '          => (string) $post->getDesc(),
+            'post_desc'           => (string) $post->getDesc(),
             'post_content'        => (string) $post->getContent(),
             'post_created'        => (string) $post->getCreated(),
             'post_allow_comments' => (int)    $post->getAllowComments(),        
             'post_url_slug'       => (string) $post->getUrlSlug(),
             'post_writer'         => (string) $this->identity(),
             'post_visible'        => (int)    $post->getVisible()               
-        ];        
+        ];     
+
+        unset($data['post_created']);            
 
         $this->mapper->insert($data); 
-        return $this->fetchLast();
     }
 
     /**
@@ -173,7 +174,7 @@ class AdminPostsService
         unset($data['post_created']);  
 
         $this->mapper->update($data, ['post_id' => $postId]); 
-        return $this->fetchLast();
+        return $this->mapper->fetchLast();
     }
 
     /**
@@ -200,7 +201,8 @@ class AdminPostsService
 	    	return $this->editPost($entity, $postId);
 	    }
 
-	    return $this->newPost($posts);
+	    $this->newPost($entity);
+        return true;
 
     }
     /**

@@ -1,4 +1,4 @@
-#Info
+# Info
 Simple blog website made with Zend Framework 3 MVC. It was written in PHP PSR standards.
 This is the first project that i was mentored to learn advanced workflow used in a professional enviroment.
 For this website i learned to use Git, Vagrant - for team code sharing compability, Composer - for PHP module dependencies via Packagist, and on the front side - Webpack 3 for CSS, Javascrpt bundling and task running.
@@ -12,21 +12,14 @@ For styling Sass preprocessor was used, with some custom made mixing library fro
 * Vagrant installed on your system (with Oracle VM)
 * Node / npm installed on your system
 
-### How to install
-
-1. composer install
-2. cd /public
-3. npm install
-
 ### How to run
 
-1. vagrant up
-2. vagrant ssh
-3. cd /etc
-4. sudo nano hosts
-5. copy into file: 192.168.73.15 blog.test (if you are a windows user you might need to copy it to your windows HOSTS file)
-6. mysql -u root -p123456 blog < etc/www/blog/data/mysql-dump.sql
-7. u
+1. Open cmd then type ```composer install```
+2. Modify ```Vagrantfile``` if necessary for avoiding port or address conflict, then type ```vagrant up```, wait for installation to end then type ```vagrant ssh```
+3. In vagrant enviroment type ```cd /etc```, then ```sudo nano hosts```
+4. copy into file: ```192.168.73.15 blog.test``` (if you are a windows user you might need to copy this to your windows HOSTS file)
+5. type  ``` mysql -u root -p123456 blog <  /var/www/blog/data/mysql-dump.sql```
+6. in your local enviroment navigate to the /public folder and type ```npm install```
 
 ## What to do
 
@@ -35,8 +28,5 @@ For styling Sass preprocessor was used, with some custom made mixing library fro
 * Username and password are: admin@example.com, with password 123456
 * Play around with posts a little bit
 
-### Files Note
-*bootstrapper.sh - vagrant provisioning file
-
 ### Author note
-Since this website was serving as personal practice with some possibility that it will go online, many modifications are not implemented, such as comments control, admin modification etc.
+Since this website was serving as personal practice with some possibility that it will go online, many modifications are not implemented, such as comments control, user registration, admin modification etc.

@@ -54,6 +54,7 @@ $slow-transition-duration: 300ms !default;
     width: 100%;
     min-height: 300px;
     margin: 17px auto;
+    background: white;   
 }
 
 .trumbowyg-box .trumbowyg-editor {
@@ -102,7 +103,6 @@ $slow-transition-duration: 300ms !default;
 }
 
 .trumbowyg-textarea {
-    background: red;
     position: relative;
     display: block;
     overflow: auto;
@@ -117,7 +117,6 @@ $slow-transition-duration: 300ms !default;
         width: 25%;
         min-height: 0 !important;
         padding: 0 !important;
-        background: none;
         opacity: 0 !important;
     }
 }
@@ -305,10 +304,9 @@ $slow-transition-duration: 300ms !default;
     transform: translateX(-50%);
     max-width: 520px;
     width: 100%;
-    height: 350px;
+    height: 50%;
     z-index: 12;
     overflow: hidden;
-    backface-visibility: hidden;
 }
 
 .trumbowyg-modal-box {
@@ -320,11 +318,10 @@ $slow-transition-duration: 300ms !default;
     width: calc(100% - 20px);
     padding-bottom: 45px;
     z-index: 1;
-    background-color: #FFF;
+    background-color: #FAFAFA;
     text-align: center;
     font-size: 14px;
     box-shadow: rgba(0, 0, 0, .2) 0 2px 3px;
-    backface-visibility: hidden;
 
     .trumbowyg-modal-title {
         font-size: 24px;
@@ -334,7 +331,8 @@ $slow-transition-duration: 300ms !default;
         display: block;
         border-bottom: 1px solid #EEE;
         color: #333;
-        background: lighten($light-color, 5%);
+        background: $orange;
+        @include Montserrat-Light
     }
 
     .trumbowyg-progress {

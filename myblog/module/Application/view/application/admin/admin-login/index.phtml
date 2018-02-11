@@ -1,13 +1,6 @@
 <div class="admin-login">
-    <h1 class="font-regular text-lg"> Login </h1>
-    <div class="errors-pop">
-        <div class="errors-field" id="email-errors">
-        </div>
-        <div class="errors-field" id="pass-errors">
-        </div>        
-        <div class="errors-field" id="credentials">
-        </div>                
-    </div>    
+    <div class="error-field"></div>    
+    <h1 class="font-regular text-lg"> Login </h1>         
     <div class="admin-form-wrap">
 
         <form data-ajax="true" action="<?= $this->url('admin/login_management'); ?>" method="post">

@@ -1,18 +1,21 @@
 .post-popup {
-    overflow: hidden;
 	@include mcenter;
 	display: none;
     @include size(100%, 100%);
-	background: white;
- 
+	background: #F3F3F3;
+    opacity:0.98;
+    position: absolute;
+
     .post-popup-close {
 	    text-align: center;
 	    cursor: pointer;
-        width:100%;
+        width:5%;
         background: $orange;
         transition:0.2s;
-        margin:0;
+        margin:20px auto 0 auto;
         padding:20px;
+        border-radius: 4px;
+        color:white;
 
     }
 
