@@ -58,7 +58,7 @@ CREATE TABLE `comments` (
   `comment_body` varchar(355) NOT NULL,
   `comment_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`comment_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,33,'','Mufladin','Gde je moja lampa?','2018-01-15 21:01:16'),(2,33,'','Stonoga','Mrc mrc','2018-01-15 21:01:28'),(3,33,'','','Great stuff bro!','2018-01-16 07:03:50'),(4,33,'','Mr mister','Great stufff i have to say i\'am a little bit suprised cause of the lack in the insight of the stuff i write. So the deail is to get supised!\n\nGreat stufff i have to say i\'am a littl','2018-01-16 10:59:39'),(5,33,'','234t32t23','t23t23t23t23t23t','2018-01-16 10:59:55');
+INSERT INTO `comments` VALUES (6,32,'','Marko','Hello world!','2018-02-11 13:32:23');
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +114,7 @@ CREATE TABLE `posts` (
   `post_writer` varchar(100) NOT NULL,
   `post_visible` tinyint(4) NOT NULL,
   PRIMARY KEY (`post_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +123,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (23,'Zdravko kurvetine! sta se rad!','Zdravko kurvetine! sta se rad!Zdravko kurvetine! sta se rad!','','2018-01-15 22:42:24','qwrqwtqwtqwtqwtqwt',1,'zdravko-kurvetine-sta-se-rad-','konstantinbulatovic1@gmail.com',1),(32,'Foreach examples wih ease','<p>Yes its easy, says the lord and our savior. But somethimes is hard!Yes its easy, says the lord and our savior. But somethimes is hard!Yes its easy, says the lord and our savior. But somethimes is hard!wqrqwtqwt</p>','','2018-01-14 16:47:47','Yes its easy, says the lord and our savior. But somethimes is hard!',1,'foreach-examples-wih-ease','konstantinbulatovic1@gmail.com',1),(33,'Hello world to everybody','<p>Yes its true.</p><br><p>I started doing this stuff for 2 reasons:</p><p><ol><li>To make money</li><li>And to fuck bitches</li></ol><br><p>Some might say thats a dumb thing to do. But honnestly i dont give a uck. The main purpose of life is to jerk off so why should i care. The manifest of destiny is to accomlish your goals, and thats hard. You need lifetime of sucking up to corporate bosses.</p><p>Well today is a new day. And its hard to think otherwise so i set up a little goals</p><h2>Repeat everything</h2><p>This may sound silly bu its true and i trully hate it. TRULLY!</p></p>','','2018-01-14 17:21:12','This is some post i write about stuff',1,'hello-world-to-everybody','konstantinbulatovic1@gmail.com',1),(35,'Saying random title','<p>This is random stuff that i post to test stuff out la la la</p><br><p>Helooo</p>','','2018-01-16 09:36:45','Random stuff right here',1,'saying-random-title','konstantinbulatovic1@gmail.com',1);
+INSERT INTO `posts` VALUES (32,'Example post','<p><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</span></p>','','2018-02-11 13:32:07','This is an example post',1,'example-post','konstantinbulatovic1@gmail.com',1);
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,4 +166,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-17  9:02:31
+-- Dump completed on 2018-02-11 13:33:11

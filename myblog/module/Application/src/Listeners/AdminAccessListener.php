@@ -63,10 +63,6 @@ class AdminAccessListener extends AbstractListenerAggregate
 
             if (!$auth->hasIdentity()) {
 
-                if (count($adminMapper->fetchAll()) == 0) {
-                    $current->redirect()->toRoute('admin/admin_management', ['action' => 'init']);                                  
-                }
-
                 if (
                     $controller == $childController       && 
                     $controller != $loginController       ||

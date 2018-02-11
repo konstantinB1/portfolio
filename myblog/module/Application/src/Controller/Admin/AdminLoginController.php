@@ -2,10 +2,12 @@
 
 namespace Application\Controller\Admin;
 
+use Application\Filter\AdminLoginFilter;
+use Application\Mapper\PostsMapper;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\JsonModel;
 use Zend\Authentication\AuthenticationService;
-use Application\Filter\AdminLoginFilter;
+
 
 class AdminLoginController extends AbstractActionController
 {
@@ -21,6 +23,11 @@ class AdminLoginController extends AbstractActionController
     private $filter;
 
     /**
+    * @var $filter
+    */          
+    private $mapper;    
+
+    /**
      * Uses Zend Athentication Service class, which checks user POST login information,
      * and compares them to the information provided in this factory constructor.
      *
@@ -29,10 +36,12 @@ class AdminLoginController extends AbstractActionController
      */
     public function __construct(
         AuthenticationService $authService,
-        AdminLoginFilter $filter
+        AdminLoginFilter $filter,
+        PostsMapper $mapper
     ) {
         $this->authService    = $authService;
         $this->filter         = $filter;
+        $this->mapper         = $mapper;
     }
 
 

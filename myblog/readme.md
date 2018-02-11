@@ -18,15 +18,15 @@ For styling Sass preprocessor was used, with some custom made mixing library fro
 2. Modify ```Vagrantfile``` if necessary for avoiding port or address conflict, then type ```vagrant up```, wait for installation to end then type ```vagrant ssh```
 3. In vagrant enviroment type ```cd /etc```, then ```sudo nano hosts```
 4. copy into file: ```192.168.73.15 blog.test``` (if you are a windows user you might need to copy this to your windows HOSTS file)
-5. type  ``` mysql -u root -p123456 blog <  /var/www/blog/data/mysql-dump.sql```
-6. in your local enviroment navigate to the /public folder and type ```npm install```
+5. upload db  ``` mysql -u root -p123456 blog < /var/www/blog/data/mysql.sql```
+6. in your local enviroment navigate to the /public folder and type ```npm install``` if you want to modify css or javascript files via webpack
 
 ## What to do
 
-* Access the website by url http://blog.test
-* Admin area is in the /admin route aka http://blog.test/admin
-* Username and password are: admin@example.com, with password 123456
-* Play around with posts a little bit
+* Access the website by url ```http://blog.test```
+* Admin area is in the ```/admin``` route aka ```http://blog.test/admin```
+* Username and password are: ```admin@mysite.com```, with password ```123456```
+* Write, delete, edit posts
 
 ### Author note
-Since this website was serving as personal practice with some possibility that it will go online, many modifications are not implemented, such as comments control, user registration, admin modification etc.
+Since this website was serving as personal practice with some possibility that it will go online, many modifications are not implemented, and some of them need further improvement.

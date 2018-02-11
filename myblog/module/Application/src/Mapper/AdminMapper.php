@@ -67,7 +67,7 @@ class AdminMapper extends AbstractTableGateway
 
 		if ($init) { 
 			$admin->setPassword('123456');	
-			$admin->setEmail('konstantinbulatovic1@gmail.com');
+			$admin->setEmail('admin@myblog.com');
 		}
 
 		$data['admin_email']    = (string) $admin->getEmail();

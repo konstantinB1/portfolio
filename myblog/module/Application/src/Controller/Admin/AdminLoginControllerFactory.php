@@ -4,6 +4,7 @@ namespace Application\Controller\Admin;
 
 use Application\Controller\Admin\AdminLoginController;
 use Application\Filter\AdminLoginFilter;
+use Application\Mapper\PostsMapper;
 use Interop\Container\ContainerInterface;
 use Zend\Authentication\Adapter\DbTable\CallbackCheckAdapter;
 use Zend\Authentication\AuthenticationService;
@@ -37,7 +38,8 @@ class AdminLoginControllerFactory implements FactoryInterface
 
         return new AdminLoginController(
             $authService,
-            $container->get(AdminLoginFilter::class)
+            $container->get(AdminLoginFilter::class),
+            $container->get(PostsMapper::class)
         );
     }
 
